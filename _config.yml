@@ -1,0 +1,12 @@
+---
+source: .
+destination: _build
+exclude:
+    -   README.md
+encoding: UTF-8
+future: false
+social:
+    github: akerl
+    twitter: akerl
+...
+

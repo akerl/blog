@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/static/css/main.css">
+    </head>
+    <body>
+        <div class="site">
+            <div class="header">
+                <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+            </div>
+
+            {{ content }}
+
+            <div class="footer">
+                <div class="contact">
+                    <p>
+                        <a href="https://github.com/{{site.social.github}}">github.com/{{site.social.github}}</a><br />
+                        <a href="https://twitter.com/{{site.social.twitter}}">twitter.com/{{site.social.twitter}}</a><br />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
