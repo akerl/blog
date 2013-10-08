@@ -3,6 +3,7 @@ source: .
 destination: _build
 exclude:
     -   README.md
+    -   LICENSE
 encoding: UTF-8
 future: false
 social:
