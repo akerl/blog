@@ -6,6 +6,7 @@ exclude:
     -   LICENSE
 encoding: UTF-8
 future: false
+excerpt_separator: <!--more-->
 social:
     github: akerl
     twitter: akerl
