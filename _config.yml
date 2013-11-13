@@ -1,6 +1,7 @@
 ---
 source: .
 destination: _build
+pygments: true
 exclude:
     -   README.md
     -   LICENSE
