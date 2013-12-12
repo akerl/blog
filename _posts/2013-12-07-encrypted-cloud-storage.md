@@ -17,7 +17,7 @@ The first step was to set up these services to sync to a standardized location. 
 
 There was some content that I didn't plan on encrypting, so I set up symlinks linking those locations to where I wanted them in the filesystem:
 
-```
+``` bash
 ln -s ~/.cloud/Dropbox ~/Dropbox # For convenient access as well as the various apps that sync via Dropbox
 ln -s ~/.cloud/Google/Books ~/Books # I'm not terribly concerned about encrypting my collection of ebooks
 ```
@@ -26,19 +26,19 @@ I then looked at a couple encryption methods, and settled on [EncFS](https://en.
 
 EncFS is packaged in [Homebrew](https://github.com/mxcl/homebrew), but the package depends on the [OSXFUSE](http://osxfuse.github.io/) packaged in Homebrew, which requires full XCode to install. I already had OSXFUSE installed via their package, and I wasn't particularly keen on installing XCode just to install OSXFUSE a second time. Thankfully, Homebrew makes it pretty easy to modify install "formulas", so I adjusted the EncFS formula to skip the OSXFUSE dependency and use the pre-existing libs. I threw that in a gist, and installing it was just a matter of pointing brew at it:
 
-```
+``` bash
 brew install https://gist.github.com/akerl/7571256/raw/5799e52b8e69cd1e63f89426412678d5cb56f76d/encfs.rb
 ```
 
 There was also an issue with the boost libraries being in the wrong spot, since I'm a rebel and don't put brew in /usr/local. I fixed that with the following one-liner:
 
-```
+``` bash
 for x in /usr/local/brew/lib/libboost_*.dylib; do sudo ln -s $x /usr/local/lib; done
 ```
 
 I then picked out the mount points I wanted and made the EncFS filesystems to put there. Setting up EncFS is pretty simple; you run the encfs command with a source and destination, and if they aren't set up, it walks you through setting them up. If they are, it prompts you for the key and mounts that filesystem. I ended up creating 3 mount points:
 
-```
+``` bash
 encfs ~/.cloud/Dropbox/scratch.encfs ~/scratch
 encfs ~/.cloud/Dropbox/tmp.encfs ~/tmp
 encfs ~/.cloud/Copy/vault.encfs ~/vault
@@ -50,7 +50,7 @@ Part of the goal was to have these directories be mounted seamlessly, under the 
 
 (https://github.com/akerl/scripts/blob/master/mount_encfs)
 
-```
+``` ruby
 #!/usr/bin/env ruby
 
 require 'keychain'
@@ -73,7 +73,7 @@ end
 
 Having run that manually and confirmed it worked by checking `df -h`, I set out to have the filesystems mounted automatically at boot. The easiest way to do to this on a Mac is via a launchd script, and [Lingon](http://www.peterborgapps.com/lingon/) provides a sweet interface for controlling launchd jobs. I added a job there pointing to the script, and rebooted to confirm it was happy:
 
-```
+``` bash
 ❯ df -h
 Filesystem       Size   Used  Avail Capacity  iused    ifree %iused  Mounted on
 /dev/disk1      233Gi   60Gi  173Gi    26% 15662492 45325027   26%   /

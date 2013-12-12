@@ -1,13 +1,15 @@
 ---
 source: .
 destination: _build
-pygments: true
+pygments: false
 exclude:
     -   README.md
     -   LICENSE
 encoding: UTF-8
 future: false
 excerpt_separator: <!--more-->
+markdown:      redcarpet
+markdown_ext:  md
 social:
     github: akerl
     twitter: akerl
