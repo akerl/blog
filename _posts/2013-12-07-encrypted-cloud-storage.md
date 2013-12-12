@@ -6,6 +6,8 @@ It's pretty clear these days that {thing}-as-a-service is a pretty powerful conc
 
 I love Dropbox, but I'm not sure I'm ready to trust them with my secret plans for world domination. As such, I've decided that I'd like to add a layer of encryption on top of my Dropbox storage, as well as other similar providers. I looked around, and decided to work with [Dropbox](https://db.tt/xSBPWTGd), [Copy](https://copy.com?r=YubGHw), and [Google Drive](https://drive.google.com). As a disclaimer, the Dropbox and Copy links include my referral code so I get extra space if you use them.
 
+<!--more-->
+
 The first step was to set up these services to sync to a standardized location. I picked these 3 partially because all of them support auser-configurable sync location. For simplicity, I created ~/.cloud and set each provider to sync to ~/.cloud/{provider_name}, so I ended up with the following structure:
 
 ```

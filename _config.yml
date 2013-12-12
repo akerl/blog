@@ -7,7 +7,7 @@ exclude:
     -   LICENSE
 encoding: UTF-8
 future: false
-excerpt_separator: <!--more-->
+excerpt_separator: "<!--more-->"
 markdown:      redcarpet
 markdown_ext:  md
 social:
