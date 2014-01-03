@@ -7,20 +7,14 @@
         <link rel="stylesheet" href="/assets/css/main.css">
     </head>
     <body>
-        <div class="site">
-            <div class="header">
-                <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            </div>
+        {{ content }}
 
-            {{ content }}
-
-            <div class="footer">
-                <div class="contact">
-                    <p>
-                        <a href="https://github.com/{{site.social.github}}">github.com/{{site.social.github}}</a><br />
-                        <a href="https://twitter.com/{{site.social.twitter}}">twitter.com/{{site.social.twitter}}</a><br />
-                    </p>
-                </div>
+        <div class="footer">
+            <div class="contact">
+                <p>
+                    <a href="https://github.com/{{site.social.github}}">github.com/{{site.social.github}}</a><br />
+                    <a href="https://twitter.com/{{site.social.twitter}}">twitter.com/{{site.social.twitter}}</a><br />
+                </p>
             </div>
         </div>
     </body>

@@ -2,8 +2,8 @@
 title: Blogthing
 layout: index
 ---
-
 <div id="posts">
+    <h2>Things I typed</h2>
     {% for post in site.posts %}
         {% if post.layout == 'post' %}
             <div class="post">
@@ -21,10 +21,11 @@ layout: index
     {% endfor %}
 </div>
 <div id="sidebar">
+    <h2>Little thoughts</h2>
     <ul id='microposts'>
         {% for post in site.posts %}
             {% if post.layout == 'micro' %}
-                <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+                <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.location }}">{{ post.title }}</a></li>
             {% endif %}
         {% endfor %}
     </ul>
