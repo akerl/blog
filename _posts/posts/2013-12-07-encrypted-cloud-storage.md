@@ -46,7 +46,7 @@ encfs ~/.cloud/Dropbox/tmp.encfs ~/tmp
 encfs ~/.cloud/Copy/vault.encfs ~/vault
 ```
 
-I ended up not setting up any encrypted filesystems on Google Drive after discovering an odd bug: their client blocks files from being "deleted" when they are deleted, so an EncFS mounted from Google Drive fails when trying to delete directories, claiming the aren't empty. It didn't look like something easily resovable, and I had plenty of space from Dropbox and Copy to work with, so I resigned myself to using Google Drive for large but not sensitive files.
+I ended up not setting up any encrypted filesystems on Google Drive after discovering an odd bug: their client blocks files from being "deleted" when they are deleted, so an EncFS mounted from Google Drive fails when trying to delete directories, claiming the aren't empty. It didn't look like something easily resolvable, and I had plenty of space from Dropbox and Copy to work with, so I resigned myself to using Google Drive for large but not sensitive files.
 
 Part of the goal was to have these directories be mounted seamlessly, under the "If it's lots of work, I won't do it" principle. To do this, I added the credentials and path information to the OSX keychain. In Keychain Access, I added a password item for each encfs filesystem, and set the name to "EncFS", the account to the source path for the filesystem, and the password to the decryption key. I then edited the newly added item and set the comment to the destination path. I wrote the following script in Ruby that reads that information from the keychain and uses it to mount the filesystems:
 
