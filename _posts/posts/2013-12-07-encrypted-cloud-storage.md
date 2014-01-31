@@ -2,7 +2,7 @@
 layout: post
 title: Encrypted Cloud Storage
 ---
-It's pretty clear these days that {thing}-as-a-service is a pretty powerful concept. That said, it involves a certain level of trust in whoever is providing the service. Part of that is the trust that they'll keep providing you the service, but on the tin-foil-hat side, you trust that they won't use the information you give them to your detriment. This is especially true for storage/hosting service providers, where you're quite literally handing your data to a 3rd party.
+It's pretty clear these days that {thing}-as-a-service is a powerful concept. That said, it involves a certain level of trust in whoever is providing the service. Part of that is the trust that they'll keep providing you the service, but on the tin-foil-hat side, you trust that they won't use the information you give them to your detriment. This is especially true for storage/hosting service providers, where you're quite literally handing your data to a 3rd party.
 
 I love Dropbox, but I'm not sure I'm ready to trust them with my secret plans for world domination. As such, I've decided that I'd like to add a layer of encryption on top of my Dropbox storage, as well as other similar providers. I looked around, and decided to work with [Dropbox](https://db.tt/xSBPWTGd), [Copy](https://copy.com?r=YubGHw), and [Google Drive](https://drive.google.com). As a disclaimer, the Dropbox and Copy links include my referral code so I get extra space if you use them.
 
