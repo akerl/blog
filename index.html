@@ -10,8 +10,8 @@ layout: index
                 <div class="post-title">
                     <a href="{{ post.url }}">
                         <span>{{ post.title }}</span>
-                        <span>{{ post.date | date_to_string }}</span>
                     </a>
+                    <span>-- {{ post.date | date_to_string }}</span>
                 </div>
                 <div class="excerpt">
                     <p>{{ post.excerpt }}</p>
