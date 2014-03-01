@@ -8,6 +8,7 @@ exclude:
 encoding: UTF-8
 future: false
 excerpt_separator: "<!--more-->"
+permalink: pretty
 markdown:      redcarpet
 markdown_ext:  md
 social:
