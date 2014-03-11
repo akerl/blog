@@ -6,7 +6,7 @@ RSpec::Core::RakeTask.new(:spec)
 
 desc 'Run Rubocop on the gem'
 Rubocop::RakeTask.new(:rubocop) do |task|
-  task.patterns = ['**/*.rb']
+  task.patterns = ['spec/**/*.rb']
   task.fail_on_error = true
 end
 
