@@ -1,18 +1,24 @@
 ---
 source: .
 destination: _build
-pygments: false
+
 exclude:
-    -   README.md
-    -   LICENSE
-encoding: UTF-8
-future: false
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Rakefile
+  - spec
+
+highligher: nil
 excerpt_separator: "<!--more-->"
+
 permalink: pretty
-markdown:      redcarpet
-markdown_ext:  md
-social:
-    github: akerl
-    twitter: akerl
+
+markdown: kramdown
+markdown_ext: md
+kramdown:
+  input: GFM
+
+timezone: US/Eastern
 ...
 

@@ -1,1 +1,6 @@
-_build
+pkg/*.gem
+coverage/
+.coveralls.yml
+.bundle
+Gemfile.lock
+_build/

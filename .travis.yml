@@ -1,0 +1,11 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.1.0
+- 2.0.0
+- 1.9.3
+notifications:
+  email: false
+  irc:
+    template:
+      - '%{repository}/%{branch}/%{build_number}: %{message} -- %{build_url}'
