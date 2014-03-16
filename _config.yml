@@ -13,6 +13,9 @@ exclude:
 highligher: nil
 excerpt_separator: "<!--more-->"
 
+gems:
+- jekyll_prism
+
 permalink: pretty
 
 markdown: kramdown
