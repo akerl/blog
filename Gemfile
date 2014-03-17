@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'jekyll_prism' '~> 0.0.2'
 gem 'jekyll', '~> 1.4.3'
 gem 'kramdown', '~> 1.3.2'
 

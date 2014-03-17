@@ -17,7 +17,7 @@ end
 
 desc 'Build the site'
 task :build do
-  `jekyll build`
+  fail unless system 'jekyll build'
 end
 
 task default: [:spec, :travislint, :rubocop, :build]
