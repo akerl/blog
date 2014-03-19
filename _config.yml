@@ -3,13 +3,14 @@ source: .
 destination: _build
 
 exclude:
-  - README.md
-  - LICENSE
-  - Gemfile
-  - Gemfile.lock
-  - Rakefile
-  - spec
-  - deps
+- README.md
+- LICENSE
+- Gemfile
+- Gemfile.lock
+- Rakefile
+- spec
+- deps
+- vendor
 highligher: nil
 excerpt_separator: "<!--more-->"
 
