@@ -1,6 +1,6 @@
 ---
 layout: micro
 title: LevelMoney provides simple financial awareness from your phone
-date: 2013-11-22 02:35:00
+date: 2014-02-01 00:00:00
 location: 'https://levelmoney.com/'
 ---
