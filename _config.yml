@@ -11,6 +11,8 @@ exclude:
 - spec
 - deps
 - vendor
+include:
+- .well-known
 highligher: nil
 excerpt_separator: "<!--more-->"
 
