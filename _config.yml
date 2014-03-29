@@ -27,4 +27,5 @@ kramdown:
   input: GFM
 
 timezone: US/Eastern
+encoding: utf-8
 ...
