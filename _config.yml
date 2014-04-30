@@ -3,13 +3,16 @@ source: .
 destination: _build
 
 exclude:
-  - README.md
-  - LICENSE
-  - Gemfile
-  - Gemfile.lock
-  - Rakefile
-  - spec
-  - deps
+- README.md
+- LICENSE
+- Gemfile
+- Gemfile.lock
+- Rakefile
+- spec
+- deps
+- vendor
+include:
+- .well-known
 highligher: nil
 excerpt_separator: "<!--more-->"
 
@@ -24,4 +27,5 @@ kramdown:
   input: GFM
 
 timezone: US/Eastern
+encoding: utf-8
 ...

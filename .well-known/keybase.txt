@@ -1,0 +1,67 @@
+https://keybase.io/akerl
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://blog.akerl.org
+  * I am akerl (https://keybase.io/akerl) on keybase.
+  * I have a public key with fingerprint 0641 CBC7 035C 2170 CE21  08A6 BC5F 2A05 43D0 048F
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "0641cbc7035c2170ce2108a6bc5f2a0543d0048f",
+            "host": "keybase.io",
+            "key_id": "BC5F2A0543D0048F",
+            "uid": "c7436a9f87e464b07c53c06b322bee00",
+            "username": "akerl"
+        },
+        "service": {
+            "hostname": "blog.akerl.org",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1398427463,
+    "expire_in": 157680000,
+    "prev": "48a115d18bca8e2e45e8aedec90c04d0d913deb60679ef72ac6109394d56fadd",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+
+owGbwMvMwMS4J16L1fkCSz/j6QMfkxiCo/zdq5WS8lMqlayqlbJTwVRaZl56alFB
+UWZeiZKVkoGZiWFyUrK5gbFpspGhuUFyqpGhgUWiWVKyaZpRooGpiXGKgYGJRZqS
+jlJGfjFIB9CYpMTiVL3MfKAYkBOfmQIUdXI2dTNyBKl3Aal3A8qVgiWSzU2MzRIt
+0yzMU03MTJIMzJNNjZMNzJKMjYySUlMNDEAKi1OL8hJzU4GqE7NTi3KUanWUgEJl
+mcmpIAeD7IVKJ+Xkp+uB1ejlF6UDtRYU5ZfkJ+fnAOUySkoKrEBaSyoLQGrLU5Pi
+oabEJ2XmpQC9DdRQllpUnJmfp2RlCFSZXJIJMtbQ2NLCxMjcxMxYRym1oiCzKDU+
+E6TC1NzMwgAIQNaklgGNNLFINDQ0TTG0SEpOtEg1SjUxTbVITE1JTbY0SDYwSTFI
+sTQ0TklNMjMwM7dMTTM3Skw2MzSwNLY0STE1S0tMSVEC+aswLx9kJdCdielAM4sz
+0/MSS0qLUpVqO5lkWBgYmRjYWJlAMcfAxSkAi8+MPP5/5icuXlhieS4qtTj6ru6b
+9CXStuVch9f+0Z94xCZqSutbG4MNtm03j92TEXyunKf/sugb/5TfZ/efEJyxZO+v
+isKV+0MVdVKEv6a9vH6nc6Ufn/3tBNmmjOdHrC+kSZ5K57ke8Xbb8R0vNtyIzn+y
+8K/4gtP+C9i1fafolkk7KERbci0u3lt3z6ytqMWfTc4z91fN3ov32COEju3p2XA0
+/7JDZuz6nuk7yvMVBK88U2M1XG8x38OWRct/rVRgzjeOyuctNyPa+Y90ms373sfb
+pSL6/W/c3iusJ41W7dhU/TDHI3bVsTP3ctruqz4Vb6i/1GGvpKFguUuQJaTt0JOr
++lo/FLaXsO4q+y2p+L/yl7Usm6dxdPnZ+q6cbokDFn5N13b9Pbggx437ipxESsOn
+fsPp231VZueKWZ24dvvVr7p22+3nVv2+sOHQ3I4Zam1i0218b1/7fWqOFvuhtL9V
+HVktqXdm8MU22BiXrzsxdSWP24qbUZVcVfETd7xco5X3aod65sHDSXJXVZsUHY60
+nPCa+ym2bNq/J2G/DPL/XZq/WfqO/LeVbkEGyrMOpbH9Mjq51WjS9SlpbgrHr9Zd
+VZ2t7Lfv+SHbzT0d7ruyXa5OUJe43+rj7nDK8ObTnuOH1Dmcfunsc+BfXvymL1ef
+zbpYQIbpmpsHw+wPMd/Fg3s+bzln0Cre9PN196I+K9UbO20TrVK6P/kVX7kCAA==
+=MDHo
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/akerl
+
