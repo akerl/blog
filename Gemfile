@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll_prism', '~> 0.0.3'
-gem 'jekyll', '~> 1.5.1'
+gem 'jekyll', '~> 2.0.1'
 gem 'kramdown', '~> 1.3.2'
 
 group :development do
