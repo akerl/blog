@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'jekyll_prism', '~> 0.0.3'
 gem 'jekyll', '~> 2.0.1'
 gem 'kramdown', '~> 1.3.2'
+gem 'therubyracer', '~> 0.12.1'
 
 group :development do
   gem 'rubocop', '~> 0.20.1'
