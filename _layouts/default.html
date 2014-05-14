@@ -10,16 +10,16 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
     </head>
     <body>
-        {{ content }}
-
-        <div class="footer">
-            <div class="contact">
-                <p>
-                    <a href="https://github.com/{{site.data.social.github}}">github.com/{{site.data.social.github}}</a><br />
-                    <a href="https://twitter.com/{{site.data.social.twitter}}">twitter.com/{{site.data.social.twitter}}</a><br />
-                </p>
+        <div class='navbar fixed'>
+            <div class='container'>
+                <h4 class='pull-left'>Les Aker</h4>
+                <ul class='pull-right'>
+                    <li><a href="https://github.com/{{site.data.social.github}}">github.com/{{site.data.social.github}}</a></li>
+                    <li><a href="https://twitter.com/{{site.data.social.twitter}}">twitter.com/{{site.data.social.twitter}}</a></li>
+                </ul>
             </div>
         </div>
+        {{ content }}
         <script src="/assets/js/prism.js"></script>
     </body>
 </html>
