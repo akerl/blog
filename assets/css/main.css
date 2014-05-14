@@ -31,9 +31,27 @@
 }
 
 body {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .navbar i {
     line-height: .5em;
+}
+
+@media (max-width: 500px) {
+    .tagline {
+        display: none;
+    }
+}
+
+.post {
+    padding: 10px 0;
+}
+
+.post .post-title {
+    font-size: 1.1em;
+}
+
+.post .excerpt {
+    padding: 5px;
 }

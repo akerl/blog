@@ -3,9 +3,9 @@ title: Blogthing
 layout: default
 ---
 <div id="row">
-    <div class="span one"></div>
-    <div class="span eight">
-        <h4>Things I typed</h4>
+    <div class="span two"></div>
+    <div class="span six">
+        <h4>Recent Posts</h4>
         {% for post in site.posts %}
             {% if post.layout == 'post' %}
                 <div class="post">
@@ -13,14 +13,14 @@ layout: default
                         <a href="{{ post.url }}">
                             <span>{{ post.title }}</span>
                         </a>
-                        <span>-- {{ post.date | date_to_string }}</span>
+                        <span>-- {{ post.date | date_to_string | replace:' ','&nbsp;' }}</span>
                     </div>
                     <div class="excerpt">
-                        <p>{{ post.excerpt | strip_html | strip_newlines}}..<a href="{{ post.url }}"> (read more)</a></p>
+                        <p>{{ post.excerpt }}<a href="{{ post.url }}"> (read more)</a></p>
                     </div>
                 </div>
             {% endif %}
         {% endfor %}
     </div>
-    <div class="span one"></div>
+    <div class="span two"></div>
 </div>
