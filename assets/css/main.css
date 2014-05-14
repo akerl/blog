@@ -34,6 +34,11 @@ body {
     margin-top: 60px;
 }
 
+.navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .navbar i {
     line-height: .5em;
 }
@@ -42,6 +47,9 @@ body {
     .tagline {
         display: none;
     }
+}
+
+@media (max-width: 700px) {
     .pad {
         display: none;
     }
