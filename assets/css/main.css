@@ -33,3 +33,7 @@
 body {
     margin-top: 50px;
 }
+
+.navbar i {
+    line-height: .5em;
+}
