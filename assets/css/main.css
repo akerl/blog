@@ -45,13 +45,11 @@ body {
 }
 
 .post {
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
-.post .post-title {
-    font-size: 1.1em;
+.post p {
+    padding: 5px 0;
+    text-align: justify;
 }
 
-.post .excerpt {
-    padding: 5px;
-}

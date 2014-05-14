@@ -5,8 +5,10 @@ layout: default
     <div class="span one"></div>
     <div class="span eight">
         <div class="post-title">
-            <span>{{ page.title }}</span>
-            <span>-- {{ page.date | date_to_string | replace:' ','&nbsp;' }}</span>
+            <h4>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+                <span>-- {{ page.date | date_to_string | replace:' ','&nbsp;' }}</span>
+            </h4>
         </div>
         <div class="post">
             {{ content }}
