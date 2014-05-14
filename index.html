@@ -2,23 +2,27 @@
 title: Blogthing
 layout: default
 ---
-<div id="posts">
-    <h2>Things I typed</h2>
-    {% for post in site.posts %}
-        {% if post.layout == 'post' %}
-            <div class="post">
-                <div class="post-title">
-                    <a href="{{ post.url }}">
-                        <span>{{ post.title }}</span>
-                    </a>
-                    <span>-- {{ post.date | date_to_string }}</span>
+<div id="row">
+    <div class="span one"></div>
+    <div class="span eight">
+        <h4>Things I typed</h4>
+        {% for post in site.posts %}
+            {% if post.layout == 'post' %}
+                <div class="post">
+                    <div class="post-title">
+                        <a href="{{ post.url }}">
+                            <span>{{ post.title }}</span>
+                        </a>
+                        <span>-- {{ post.date | date_to_string }}</span>
+                    </div>
+                    <div class="excerpt">
+                        <p>{{ post.excerpt | strip_html | strip_newlines}}..<a href="{{ post.url }}"> (read more)</a></p>
+                    </div>
                 </div>
-                <div class="excerpt">
-                    <p>{{ post.excerpt | strip_html | strip_newlines}}..<a href="{{ post.url }}"> (read more)</a></p>
-                </div>
-            </div>
-        {% endif %}
-    {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="span one"></div>
 </div>
 <div id="sidebar">
     <h2>Random Musings</h2>
