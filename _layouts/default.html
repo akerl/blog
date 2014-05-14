@@ -14,6 +14,11 @@
             <div class='container'>
                 <h4 class='pull-left'>Les Aker<span class="tagline">, open source zealot</span></h4>
                 <ul class='pull-right'>
+                    {% if page.url != '/' %}
+                        <li><a href="/">
+                            <i class="fa fa-home fa-3x" title="Blog Home" aria-hidden="true"></i>
+                        </a></li>
+                    {% endif %}
                     <li><a href="https://github.com/{{site.data.social.github}}">
                         <i class="fa fa-github-square fa-3x" title="github.com/{{site.data.social.github}}" aria-hidden="true"></i>
                     </a></li>

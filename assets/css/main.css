@@ -53,3 +53,6 @@ body {
     text-align: justify;
 }
 
+.post ol {
+    padding: 5px 30px;
+}
