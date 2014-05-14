@@ -24,14 +24,3 @@ layout: default
     </div>
     <div class="span one"></div>
 </div>
-<div id="sidebar">
-    <h2>Random Musings</h2>
-    <ul id='microposts'>
-        {% for post in site.posts %}
-            {% if post.layout == 'micro' %}
-                <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.location }}">{{ post.title }}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-</div>
-
