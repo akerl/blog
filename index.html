@@ -3,8 +3,7 @@ title: Blogthing
 layout: default
 ---
 <div id="row">
-    <div class="span two pad"></div>
-    <div class="span six">
+    <div class="span content">
         {% for post in site.posts %}
             {% if post.layout == 'post' %}
                 <div class="post">
@@ -21,5 +20,4 @@ layout: default
             {% endif %}
         {% endfor %}
     </div>
-    <div class="span two pad"></div>
 </div>

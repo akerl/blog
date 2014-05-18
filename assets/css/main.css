@@ -44,7 +44,12 @@ body {
     line-height: .5em;
 }
 
-@media (max-width: 500px) {
+#row .content {
+    width: 70%;
+    margin: 0 15%;
+}
+
+@media (max-width: 550px) {
     .tagline {
         display: none;
     }
@@ -54,8 +59,9 @@ body {
     .pad {
         display: none;
     }
-    .span {
-        width: 95%;
+    #row .content {
+        width: 96%;
+        margin: 0 2%;
     }
 }
 
