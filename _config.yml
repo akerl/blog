@@ -17,11 +17,12 @@ excerpt_separator: "<!--more-->"
 
 gems:
 - jekyll_prism
+- jekyll-assets
 
 assets:
+  cachebust: hard
   sources:
   - _assets
-  - _deps
   js_compressor:  yui
   css_compressor: yui
 
