@@ -9,7 +9,6 @@ exclude:
 - Gemfile.lock
 - Rakefile
 - spec
-- deps
 - vendor
 include:
 - .well-known
@@ -18,6 +17,13 @@ excerpt_separator: "<!--more-->"
 
 gems:
 - jekyll_prism
+
+assets:
+  sources:
+  - _assets
+  - _deps
+  js_compressor:  yui
+  css_compressor: yui
 
 permalink: pretty
 

@@ -1,1 +1,0 @@
-../../deps/prism/prism.js
