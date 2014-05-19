@@ -23,8 +23,8 @@ assets:
   cachebust: hard
   sources:
   - _assets
-  js_compressor:  yui
-  css_compressor: yui
+  js_compressor: uglifier
+  css_compressor: sass
 
 permalink: pretty
 

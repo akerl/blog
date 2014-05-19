@@ -5,7 +5,8 @@ gem 'jekyll', '~> 2.0.1'
 gem 'kramdown', '~> 1.3.2'
 gem 'therubyracer', '~> 0.12.1'
 gem 'jekyll-assets', '~> 0.7.8'
-gem 'yui-compressor', '~> 0.12.0'
+gem 'uglifier', '~> 2.5.0'
+gem 'sass', '~> 3.3.7'
 
 group :development do
   gem 'rubocop', '~> 0.20.1'
