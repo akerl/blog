@@ -9,7 +9,7 @@ gem 'uglifier', '~> 2.5.0'
 gem 'sass', '~> 3.3.7'
 
 group :development do
-  gem 'rubocop', '~> 0.22.0'
+  gem 'rubocop', '~> 0.23.0'
   gem 'rake', '~> 10.3.0'
   gem 'rspec', '~> 2.14.1'
   gem 'fuubar', '~> 1.3.2'
