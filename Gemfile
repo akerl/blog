@@ -4,7 +4,7 @@ gem 'jekyll_prism', '~> 0.0.3'
 gem 'jekyll', '~> 2.0.1'
 gem 'kramdown', '~> 1.4.0'
 gem 'therubyracer', '~> 0.12.1'
-gem 'jekyll-assets', '~> 0.7.8'
+gem 'jekyll-assets', '~> 0.8.0'
 gem 'uglifier', '~> 2.5.0'
 gem 'sass', '~> 3.3.7'
 
