@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll_prism', '~> 0.0.3'
-gem 'jekyll', '~> 2.0.1'
+gem 'jekyll', '~> 2.1.0'
 gem 'kramdown', '~> 1.4.0'
 gem 'therubyracer', '~> 0.12.1'
 gem 'jekyll-assets', '~> 0.8.0'
