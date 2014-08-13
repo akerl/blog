@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll_prism', '~> 0.0.4'
-gem 'jekyll', '~> 2.2.0'
+gem 'jekyll', '~> 2.3.0'
 gem 'kramdown', '~> 1.4.0'
 gem 'jekyll-assets', '~> 0.9.0'
 gem 'uglifier', '~> 2.5.0'
