@@ -6,6 +6,7 @@ gem 'kramdown', '~> 1.4.0'
 gem 'jekyll-assets', '~> 0.9.0'
 gem 'uglifier', '~> 2.5.0'
 gem 'sass', '~> 3.3.7'
+gem 'therubyracer', '~> 0.12.1'
 
 group :development do
   gem 'rubocop', '~> 0.24.0'
