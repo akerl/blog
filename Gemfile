@@ -5,7 +5,7 @@ gem 'jekyll', '~> 2.3.0'
 gem 'kramdown', '~> 1.4.0'
 gem 'jekyll-assets', '~> 0.9.0'
 gem 'uglifier', '~> 2.5.0'
-gem 'sass', '~> 3.3.7'
+gem 'sass', '~> 3.4.0'
 gem 'therubyracer', '~> 0.12.1'
 
 group :development do
