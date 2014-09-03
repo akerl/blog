@@ -9,7 +9,7 @@ gem 'sass', '~> 3.4.1'
 gem 'therubyracer', '~> 0.12.1'
 
 group :development do
-  gem 'rubocop', '~> 0.25.0'
+  gem 'rubocop', '~> 0.26.0'
   gem 'rake', '~> 10.3.2'
   gem 'rspec', '~> 3.0.0'
   gem 'fuubar', '~> 2.0.0'
