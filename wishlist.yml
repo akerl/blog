@@ -1,0 +1,104 @@
+---
+- name: SciShow mug
+  tagline: Cute mug with SciShow logo on it
+  image: http://dftba.com/media/dynamic/image/pfi_8342c9817f26defce3f7646484828fef.png
+  url: http://dftba.com/product/151/SciShow-Mug
+  price: 12
+- name: GitHub merit badge
+  tagline: Scouting badge commemorating love of open source
+  image: https://cdn.shopify.com/s/files/1/0051/4802/products/MG_0586_1024x1024.jpg?v=1314827144
+  url: https://github.myshopify.com/products/open-source-nerd-merit-badge
+  price: 6
+- name: Octopint glasses
+  tagline: Something to put tasty beverages in
+  image: https://cdn.shopify.com/s/files/1/0051/4802/products/pint_1024x1024.jpg?v=1378921154
+  url: https://github.myshopify.com/products/octopint-set-of-2
+  price: 16
+- name: GitHub coasters
+  tagline: For setting octopint glasses on
+  image: https://cdn.shopify.com/s/files/1/0051/4802/products/MG_9992_1024x1024.jpg?v=1378921315
+  url: https://github.myshopify.com/products/cork-coasters
+  price: 5
+- name: Risk
+  tagline: The game of global domination!
+  image: http://ecx.images-amazon.com/images/I/91FN3ci4xKL._SL1500_.jpg
+  url: http://www.amazon.com/RISK-28720-Risk-Game/dp/B004MRZGC4/
+  price: 30
+- name: Settlers of Catan
+  tagline: On the Road to Settlement!
+  image: http://images.amazon.com/images/G/01/toys/detail-page/B000W7JWUA-2-sm.jpg
+  url: http://www.amazon.com/MayFair-Games-MFG3061-Settlers-Catan/dp/B000W7JWUA/
+  price: 42
+- name: Ticket To Ride
+  tagline: All aboard!
+  image: http://ecx.images-amazon.com/images/I/61dDQUfhuvL.jpg
+  url: http://www.amazon.com/Days-of-Wonder-DOW-7201/dp/0975277324/
+  price: 50
+- name: ACR122U NFC USB Reader and Writer
+  tagline: For all your wireless datasharing needs
+  image: http://dioqew5xb7ot2.cloudfront.net/media/catalog/product/cache/1/image/265x265/9df78eab33525d08d6e5fb8d27136e95/a/c/acs-acr122u-gtt_1.jpg
+  url: http://www.buynfctags.com/nfc-readers-and-writers/acs-acr122u-nfc-usb-reader-and-writer.html
+  price: 45
+- name: Up Goer Five Poster
+  tagline: Simple stuff, really
+  image: http://cdn.shopify.com/s/files/1/0149/3544/products/upgoerfive-1_a38d4df7-5b05-4d7a-a9da-440f85f177bc_1024x1024.png?v=1385978878
+  url: http://store.xkcd.com/collections/posters/products/up-goer-five-poster
+  price: 15
+- name: Boa squeeze
+  tagline: Commuter backpack
+  image: http://www.booqbags.com/images/products_1600h/BSQ-GFT4.jpg
+  url: http://www.booqbags.com/us/backpacks/boa-squeeze/BSQ-GFT
+  price: 130
+- name: BACtrack Vio
+  tagline: Bluetooth App Enabled Breathalyzer
+  image: http://a.tgcdn.net/images/products/frontsquare/210b_bactrack_vio_bluetooth_app_breathalyzer.jpg
+  url: http://www.thinkgeek.com/product/210b/
+  price: 50
+- name: Hobbit sign
+  tagline: No Admittance Except on Party Business
+  image: http://a.tgcdn.net/images/products/frontsquare/158e_hobbit_no_admittance_except_on_party_business_magnet.jpg
+  url: http://www.thinkgeek.com/product/158e/
+  price: 7
+- name: FitBit Zip
+  tagline: Fitness tracker for your life
+  image: http://static5.fitbit.com/simple.b-dis-png.hd11586129fffa4d606e273a9fe9735fa.pack
+  url: http://www.fitbit.com/zip
+  price: 60
+  extra: Black
+- name: Nintendo Wii U
+  tagline: Next generation of fun!
+  image: http://ecx.images-amazon.com/images/I/71oHatSEvBL._SL1500_.jpg
+  url: http://www.amazon.com/Nintendo-Wii-Console-Black-Deluxe-U/dp/B009AGXH64/
+  price: 320
+- name: Apple Thunderbolt Display
+  tagline: See stuff, bigger and clearer
+  image: http://store.storeimages.cdn-apple.com/4124/as-images.apple.com/is/image/AppleInc/aos/published/images/M/C9/MC914/MC914
+  url: http://store.apple.com/us/product/MC914LL/B/apple-thunderbolt-display-27-inch
+  price: 1000
+- name: Apple Keyboard with Numeric Keypad
+  tagline: For making words and such
+  image: http://store.storeimages.cdn-apple.com/4124/as-images.apple.com/is/image/AppleInc/aos/published/images/M/B1/MB110LL/MB110LL
+  url: http://store.apple.com/us/product/MB110LL/B/apple-keyboard-with-numeric-keypad-english-usa
+  price: 50
+- name: Magic Trackpad
+  tagline: For moving things with your mind (and fingers)
+  image: http://store.storeimages.cdn-apple.com/4124/as-images.apple.com/is/image/AppleInc/aos/published/images/M/C3/MC380/MC380
+  url: http://store.apple.com/us/product/MC380LL/A/magic-trackpad
+  price: 70
+- name: JayBird BlueBuds X Premium Bluetooth Headphones
+  tagline: Like music to my ears
+  image: http://store.storeimages.cdn-apple.com/4124/as-images.apple.com/is/image/AppleInc/aos/published/images/H/B2/HB235/HB235
+  url: http://store.apple.com/us/product/HB235VC/A/jaybird-bluebuds-x-premium-bluetooth-headphones
+  price: 170
+  extra: black
+- name: Nest
+  tagline: Hook your house to the cloud
+  image: https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRZ_oU4qgT7jaaoQwcK5knYcnxikvwRJSN6szNy4z0FRlkhATqe
+  url: https://store.nest.com/product/thermostat/
+  price: 250
+- name: Automatic
+  tagline: Hook your car to the cloud
+  image: http://g-ec2.images-amazon.com/images/G/01/automotive/detail-page/AutomaticLink1.jpg
+  url: https://www.automatic.com/order/
+  price: 100
+
