@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'jekyll_prism', '~> 0.0.4'
-gem 'jekyll', '~> 2.4.0'
+gem 'jekyll', '~> 2.5.0'
 gem 'kramdown', '~> 1.5.0'
-gem 'jekyll-assets', '~> 0.10.0'
+gem 'jekyll-assets', '~> 0.11.0'
 gem 'uglifier', '~> 2.5.3'
 gem 'sass', '~> 3.4.1'
 gem 'therubyracer', '~> 0.12.1'
