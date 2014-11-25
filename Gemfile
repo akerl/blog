@@ -10,7 +10,7 @@ gem 'therubyracer', '~> 0.12.1'
 
 group :development do
   gem 'rubocop', '~> 0.27.0'
-  gem 'rake', '~> 10.3.2'
+  gem 'rake', '~> 10.4.0'
   gem 'rspec', '~> 3.1.0'
   gem 'fuubar', '~> 2.0.0'
 end
