@@ -1,8 +1,8 @@
 ---
 - name: SciShow mug
   tagline: Cute mug with SciShow logo on it
-  image: http://dftba.com/media/dynamic/image/pfi_8342c9817f26defce3f7646484828fef.png
-  url: http://dftba.com/product/151/SciShow-Mug
+  image: http://cdn.shopify.com/s/files/1/0506/0633/products/scishow-mug-1_large.jpg?v=1408478946
+  url: http://store.dftba.com/products/scishow-logo-mug
   price: 12
 - name: GitHub merit badge
   tagline: Scouting badge commemorating love of open source
