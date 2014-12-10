@@ -59,17 +59,6 @@
   image: http://a.tgcdn.net/images/products/frontsquare/158e_hobbit_no_admittance_except_on_party_business_magnet.jpg
   url: http://www.thinkgeek.com/product/158e/
   price: 7
-- name: FitBit Zip
-  tagline: Fitness tracker for your life
-  image: http://static5.fitbit.com/simple.b-dis-png.hd11586129fffa4d606e273a9fe9735fa.pack
-  url: http://www.fitbit.com/zip
-  price: 60
-  extra: Black
-- name: Nintendo Wii U
-  tagline: Next generation of fun!
-  image: http://ecx.images-amazon.com/images/I/71oHatSEvBL._SL1500_.jpg
-  url: http://www.amazon.com/Nintendo-Wii-Console-Black-Deluxe-U/dp/B009AGXH64/
-  price: 320
 - name: Apple Thunderbolt Display
   tagline: See stuff, bigger and clearer
   image: http://store.storeimages.cdn-apple.com/4124/as-images.apple.com/is/image/AppleInc/aos/published/images/M/C9/MC914/MC914
@@ -101,4 +90,28 @@
   image: http://g-ec2.images-amazon.com/images/G/01/automotive/detail-page/AutomaticLink1.jpg
   url: https://www.automatic.com/order/
   price: 100
-
+- name: Super Smash Bros for Wii U
+  tagline: Yay comic violence
+  image: http://ecx.images-amazon.com/images/I/A1M9vDLg1DL._SL1500_.jpg
+  url: http://www.amazon.com/Super-Smash-Bros-Nintendo-Wii-U/dp/B00DD0B0BM/
+  price: 60
+- name: Hyrule Warriors
+  tagline: Latest Zelda game
+  image: http://ecx.images-amazon.com/images/I/91Lj41PQELL._SL1500_.jpg
+  url: http://www.amazon.com/Hyrule-Warriors-Nintendo-Wii-U/dp/B00KWEHBAG/
+  price: 50
+- name: Nintendo Pro Controller for Wii U
+  tagline: Buttons made for smashing
+  image: http://ecx.images-amazon.com/images/I/51vGHXaKM-L._SL1029_.jpg
+  url: http://www.amazon.com/Nintendo-Pro-Controller-Black-Wii-u/dp/B00MUY0OFU/
+  price: 50
+- name: Gun cleaning mat
+  tagline: Don't care about the particular model, just want a mat
+  image: https://a248.e.akamai.net/f/248/9086/10h/origin-d4.scene7.com/is/image/GanderMountainOvertons/815005_L1?$highres3$
+  url: http://www.gandermountain.com/modperl/product/details.cgi?pdesc=Drymate-16-x-54-Gun-Cleaning-Pad-Green&i=815005
+  price: 15
+- name: Caldwell E-Max Low-Profile Hearing Protection
+  tagline: I'm not listening
+  image: https://a248.e.akamai.net/f/248/9086/10h/origin-d4.scene7.com/is/image/GanderMountainOvertons/420702_L1
+  url: http://www.gandermountain.com/modperl/product/details.cgi?pdesc=Caldwell-E-Max-Low-Profile-Hearing-Enhancement-Protection&i=420702
+  price: 35
