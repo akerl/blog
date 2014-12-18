@@ -23,7 +23,7 @@ body {
 
 #row .content {
     width: 70%;
-    margin: 0 15%;
+    margin: 0 15% 50px;
 }
 
 @media (max-width: 550px) {
