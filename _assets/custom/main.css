@@ -50,6 +50,21 @@ body {
     padding: 5px 30px;
 }
 
+.post .highlight {
+    margin: 20px 10px;
+    padding: 10px;
+}
+
+.post p code {
+    background-color: #ffffff;
+    padding: 0 5px;
+    font-style: italic;
+}
+
+.post h1,h2,h3 {
+    padding: 5px 0;
+}
+
 .post h1 {
     font-size: 1.75em;
 }
