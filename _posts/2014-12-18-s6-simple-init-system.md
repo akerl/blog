@@ -19,7 +19,7 @@ As per the post, the work done by pid1 is split between 3 main "stages":
 Early init
 ----------
 
-This stage starts when the initrd hands off control of the system to the rootfs. It moves the newly mounted root filesystem to `/` and execs your init process. The point of this stage is to set up the basic system to the point that service management can begin. When I started, I expected this to be pretty straightforward: make sure /proc, /sys, and friends are mounted and move on. I was mostly right (a trend that does not continue), and I ended up with the following stage1 script:
+This stage starts when the initrd hands off control of the system to the rootfs. It moves the newly mounted root filesystem to `/` and execs your init process. The point of this stage is to set up the basic system to the point that service management can begin. When I started, I expected this to be pretty straightforward: make sure /proc, /sys, and friends are mounted and move on. I was mostly right, and I ended up with the following stage1 script:
 
 {% highlight shell %}
 #!/usr/bin/execlineb -P
