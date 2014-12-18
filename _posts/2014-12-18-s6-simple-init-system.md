@@ -74,7 +74,7 @@ The primary issue here is making sure all your processes run in the foreground, 
 
 This mode keeps going until the system is shut down or melted down into raw materials, at which point s6-svcan runs ./.s6-svscan/finish, which I've symlinked to my stage3 script.
 
-Graceful selfdestruct
+Graceful self-destruct
 ---------------------
 
 Stage 3 in my case is way simpler than most systems. I'm not saving any state, and all the system bits are read-only artifacts, so there's not much fear of inconsistent writes or shutting processes down cleanly.
