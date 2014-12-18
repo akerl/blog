@@ -12,8 +12,13 @@ body {
     padding-right: 20px;
 }
 
+.navbar ul {
+    margin: 0;
+    padding: 0;
+}
+
 .navbar i {
-    line-height: 10px;
+    line-height: 25px;
 }
 
 #row .content {
