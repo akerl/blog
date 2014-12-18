@@ -79,5 +79,56 @@ Graceful selfdestruct
 
 Stage 3 in my case is way simpler than most systems. I'm not saving any state, and all the system bits are read-only artifacts, so there's not much fear of inconsistent writes or shutting processes down cleanly.
 
-That said, my main issue was getting the system to enter stage 3 at all. Crazy, right? Hitting shutdown in Linode's UI wasn't successfully triggering stage 3, it was timing out after 2 minutes and the host was forcibly pulling the plug on my VM.
- 
+That said, my main issue was getting the system to enter stage 3 at all. Crazy, right? Hitting shutdown in Linode's UI wasn't successfully triggering stage 3, it was timing out after 2 minutes and the host was forcibly pulling the plug on my VM. My initial hunch was that the shutdown signal wasn't being properly handled by s6, but I confirmed that manually sending SIGINT to pid 1 caused the shutdown to trigger as expected. I then moved on to investigating how a shutdown request from Xen translates to a SIGINT on pid 1. Essentially, Xen sends a hypercall to the VM which translates roughly to a ctrl-alt-delete, and the kernel reacts to that. I searched some more and found /proc`/sys/kernel/ctrl-alt-del`, which controls whether the kernel tries a graceful shutdown via SIGINT or a forcible one. That ended up being a dead end, since neither option successfully shut down the system, but it did lead me to hunting around a bit more in /proc. While doing so, I found `/proc/sys/kernel/poweroff_cmd`, which defaults to `/sbin/poweroff`. I couldn't really find good docs for this, outside of reading the kernel code, but I tried setting it to the correct binary (/usr/bin/s6-reboot) and shutting down, which worked! Rather than modding that sysctl setting in the future, I set up symlinks so that /sbin/{halt,poweroff,shutdown} would all point to /usr/bin/s6-reboot.
+
+Once that was sorted, the actual stage 3 code was easy:
+
+{% highlight shell %}
+#!/usr/bin/execlineb -S0
+
+cd /
+fdclose 0
+redirfd -w 1 /dev/console
+fdmove -c 2 1
+
+foreground { echo "Syncing disks." }
+foreground { sync }
+
+
+foreground { echo "Sending all processes the TERM signal." }
+foreground { kill -15 -1 }
+foreground { sleep 3 }
+foreground { echo "Sending all processes the KILL signal." }
+foreground { kill -9 -1 }
+
+wait { }
+
+foreground { echo "Syncing disks." }
+foreground { sync }
+
+foreground { reboot -h }
+{% endhighlight %}
+
+It reclaims control of the console for stdout/err, syncs the disks, kills the processes (first gracefully, then hard), waits for them to be reaped, then syncs again and reboots.
+
+Final product
+=============
+
+The end result is a fully functional init system for my VM:
+
+{% highlight shell %}
+[root@grego ~]# pstree
+s6-svscan─┬─gpg-agent
+          ├─s6-supervise───agetty
+          ├─s6-supervise───sshd─┬─sshd───bash
+          │                     └─sshd───bash───pstree
+          ├─s6-supervise───radvd───radvd
+          ├─s6-supervise───docker───6*[{docker}]
+          ├─s6-supervise───haveged
+          └─s6-supervise───ntpd───{ntpd}
+{% endhighlight %}
+
+There were some definite "gotcha" moments while building it, and overall I feel like it was very educational. Things like "wow, I guess I have to write something to load /etc/hostname into the running system" and having to template out my own network configs rather than leaning on a larger tool were very eye-opening experiences, and it gives a great perspective on the things most folks take for granted about their operating system.
+
+There are still plenty of things to work on, from little tweaks (like ensuring lvmetad is running) to big projects (shipping system logs to a centralized service), and I'm excited to dive into them.
+
