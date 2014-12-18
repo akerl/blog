@@ -12,7 +12,7 @@ exclude:
 - vendor
 include:
 - .well-known
-highligher: rouge
+highlighter: rouge
 excerpt_separator: "<!--more-->"
 
 gems:
