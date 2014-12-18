@@ -66,8 +66,8 @@ body {
     font-style: italic;
 }
 
-.post h1,h2,h3 {
-    padding: 5px 0;
+.post h1,.post h2,.post h3 {
+    padding: 1em 0 0.5em;
 }
 
 .post h1 {
