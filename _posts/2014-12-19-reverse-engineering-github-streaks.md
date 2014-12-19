@@ -191,16 +191,16 @@ The next component was getting the layout of the SVG right. Doing the grid squar
                 var e;
                 return
                     e = F(t[0]),                        # Get "$year$week_number" for this day
-                    I[e] || (I[e] = []),                # Default I[e] to an empty list, if it's not already been initialized
-                    I[e].push(t)                        # Push this [Date, Score] pair onto the appropriate key's array
+                    I[e] || (I[e] = []),                # Default I[e] to an empty list, if its not already been initialized
+                    I[e].push(t)                        # Push this [Date, Score] pair onto the appropriate keys array
             }),
             I = d3.entries(I),                          # Convert associative array to array of objects with {key, value} attributes
             I.forEach(function(t) {                     # Function to set j above
                 var e;
                 return
                     e = q(t.value[0][0]),               # Get "$month-$year" for first day of this week (noteworthy: January 1st is a different week from December 31st, even if they fall on the same calendar line)
-                    j[e] || (j[e] = [t.value[0][0], 0]),# If we've not already initialized this key, create it with [First_Date, 0]
-                    j[e][1] += 1                        # Increment this month's counter by one
+                    j[e] || (j[e] = [t.value[0][0], 0]),# If key is not already initialized, create it with [First_Date, 0]
+                    j[e][1] += 1                        # Increment this months counter by one
             }),
             j = d3.entries(j).sort(function(t, e) {     # Convert hash of j[$month-$year] = [first_day_a_week_starts_in_this_month, counter_of_weeks_that_begin_in_this_month] to array of {key, value} objects
                     return d3.ascending(t.value[0], e.value[0])
@@ -228,10 +228,10 @@ The next component was getting the layout of the SVG right. Doing the grid squar
                     var r;
                     return
                         r = e.value[0][0],              # Set r to the date of the first day of the week
-                        r.getFullYear() === D && 0 !== r.getDay() && 0 === B && (B = -1), # If this week started in this year and this day isn't Sunday and B is 0, set B to -1
+                        r.getFullYear() === D && 0 !== r.getDay() && 0 === B && (B = -1), # If this week started in this year and this day isnt Sunday and B is 0, set B to -1
                         "translate(" + (n + B) * t + ", 0)" # Shift this group ($index + $offset) * $cell_size to the right
                 }),
-            S = O.selectAll("rect.day").data(function(t) { # Now lets build out each day's cell
+            S = O.selectAll("rect.day").data(function(t) { # Now lets build out each days cell
                     return t.value                      # Using the value for that day
                 }).enter().append("rect")               # Make a new rectangle
                 .attr("class", "day")                   # Add the CSS class
@@ -249,7 +249,7 @@ The next component was getting the layout of the SVG right. Doing the grid squar
                 .on("mouseover", P.show)                # Set the mouseover action to show the tooltip
                 .on("mouseout", P.hide),                # And the mouseout to hide it
             d = 0,                                      # Offset for use in making month labels
-            M.selectAll("text.month")                   # Now we're working on months
+            M.selectAll("text.month")                   # Now were working on months
             .data(j)                                    # Using the $month-$year mapping
             .enter().append("text")                     # Make the text labels
             .attr("x", function(e) {                    # Set the x coordinate to $cell_size * $offset
@@ -269,7 +269,7 @@ The next component was getting the layout of the SVG right. Doing the grid squar
             }),
             M.selectAll("text.day")                     # Now build the text for weekdays
             .data(["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]) # Define our weekdays
-            .enter().append("text")                     # They're text objects
+            .enter().append("text")                     # Theyre text objects
             .style("display", function(t, e) {          # Only show the odd-index days (Monday, Wednesday, Friday)
                 return 0 === e % 2 ? "none" : void 0
             })
@@ -282,7 +282,7 @@ The next component was getting the layout of the SVG right. Doing the grid squar
             .text(function(t) {                         # And the text is the first letter of the weekday (why did we start with 3 letters anyways?)
                 return t[0]
             }),
-            f || A ? $(document).trigger("contributions:range", [f, A]) : void 0 # if we're hilighting a specific day, call that
+            f || A ? $(document).trigger("contributions:range", [f, A]) : void 0 # if we are hilighting a specific day, call that
 {% endhighlight %}
 
 
