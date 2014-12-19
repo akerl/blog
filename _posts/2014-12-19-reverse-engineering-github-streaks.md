@@ -60,7 +60,72 @@ Drawing SVGs in Ruby is pretty easy. I ended up using [rasem](https://github.com
 
 It turns out that they don't use static break-points between color levels. That part was immediately apparent. After realizing that, I grabbed a bunch of peoples' data and tried brute-forcing it, expecting to find some linear algorithm or other obvious pattern. That was a total failure. From there, I decided to dig in to their actual Javascript. It was minified to the point of insanity, but over the course of several weeks I broke it apart and commented it out:
 
-{% gist akerl/c471f87926935f41393f %}
+{% highlight javascript %}
+var t, e, n, r, a, s, i, o, c, l;
+c = 721,                                                # Width of the graph
+e = 110,                                                # Height of the graph
+l = [20, 0, 0, 20],                                     # Only used for s/a/n/r below
+s = l[0],                                               # Y offset of top of graph
+a = l[1],                                               # Not used
+n = l[2],                                               # Not used
+r = l[3],                                               # X offset of top of graph
+t = 13,                                                 # Cell size
+i = 2,                                                  # Cell padding
+o = function(t) {                                       # Calculates standard deviation(?) for outlier math
+    var e, n, r, a, s;                                  
+    if (r = t.length, 1 > r)
+        return 0 / 0;
+    if (1 === r)
+        return 0;
+    for (n = d3.mean(t), e = -1, a = 0; ++e < r; )
+        s = t[e] - n, a += s * s;
+    return a / (r - 1)
+},
+$(document).on("graph:load", ".js-calendar-graph", function(n, a) {
+    var l, u, d, h, f, m, p, g, v, b, y, j, w, x, C, k, S, _, T, D, P, A, L, E, M, B, I, O, q, F;
+    for (
+            l = $(this),
+            f = l.attr("data-from"),                    # Set if we asked to hilight a specific date
+            f && (f = C = moment(f).toDate()),          # Turn that into a date if it exists
+            A = l.attr("data-to"),                      # This never appears to be used
+            A && (A = moment(A).toDate()),              # Neither does this
+            a || (a = []),                              # If we got no contrib data, give us an empty array
+            a = a.map(function(t) {                     # Convert the points to [Date, Score] pairs, sorted by date
+                    return [new Date(t[0]), t[1]]
+                }).sort(function(t, e) {
+                    return d3.ascending(t[0], e[0])
+                }),
+            u = 3.77972616981,                          # Magic number for finding outliers
+            w = a.map(function(t) {                     # Array of just the scores
+                    return t[1]
+                }),
+            T = Math.sqrt(o(w)),                        # Square root of o() above, used for finding outliers
+            b = d3.mean(w),                             # Mean of the scores
+            _ = 3,                                      # This is our loop max
+            p = d3.max(w),                              # Max score
+            L = p - b,                                  # Max minus the mean
+            (6 > L || 15 > p) && (_ = 1),               # If (max-mean) is greater than 5 or the max is greater than 15, drop the loop max to 1
+            x = 0                                       # Start the loop counter at 0
+        ;
+            _ > x;                                      # Loop check
+        )
+            E = w.filter(function(t) {                  # Grab any outliers
+                    var e;
+                    return e = Math.abs((b - t) / T), e > u
+                }),
+            E.length > 0 ?                              # Did we find any outliers?
+                (
+                    E = E[0],                           # If so, pop the first one
+                    w = w.filter(function(t) {          # Now remove any instances of *that* number from the scores
+                        return t !== E          
+                    }),
+                    0 === x && (g = w)                  # If this is the first oulier, set g to the new list
+                )
+            :
+                E = null,                               # If we have no outliers, null E
+            x += 1;                                     # Increment the loop counter and spin again
+        return
+{% endhighlight %}
 
 The first realization was that they're doing some outlier math. I later learned that this is two-pass variance, but at the time I just knew it looked weird and set to work replicating it:
 
@@ -111,7 +176,115 @@ You'll note that they do some weird things with outlier counts. They bump a set 
 
 The next component was getting the layout of the SVG right. Doing the grid squares was pretty easy, but it turns out there's some cute math involved in the month labels to decide when they show up / where they show up. This all happens in the return statement, which happens right at the pottom of the last gist:
 
-{% gist akerl/bab369f5f42f039ac6ec %}
+{% highlight javascript %}
+        return
+            v = d3.max(w),                              # The max of the non-outliers
+            k = ["#d6e685", "#8cc665", "#44a340", "#1e6823"], # The array of color codes for the chart
+            m = d3.scale.quantile().domain([0, v]).range(k), # Map function for converting scores to colors
+            h = d3.time.format("%w"),                   # Time formatter for weekday as a decimal (0-6)
+            F = d3.time.format("%Y%U"),                 # Time formatter for "${year}${week_number}", with year as a 4 digit number
+            q = d3.time.format("%m-%y"),                # Time formatter for month-year, each as a 2 digit integer
+            y = d3.time.format("%b"),                   # Time formatter for abbreviated month name
+            I = {},                                     # Keys are "$year$week_number" from F above, values are [Date, Score] pairs
+            j = {},                                     # Keys are "$month-$year" from q above, values are a count of how many $week_numbers begin in that month
+            a.forEach(function(t) {                     # Function to set I above
+                var e;
+                return
+                    e = F(t[0]),                        # Get "$year$week_number" for this day
+                    I[e] || (I[e] = []),                # Default I[e] to an empty list, if it's not already been initialized
+                    I[e].push(t)                        # Push this [Date, Score] pair onto the appropriate key's array
+            }),
+            I = d3.entries(I),                          # Convert associative array to array of objects with {key, value} attributes
+            I.forEach(function(t) {                     # Function to set j above
+                var e;
+                return
+                    e = q(t.value[0][0]),               # Get "$month-$year" for first day of this week (noteworthy: January 1st is a different week from December 31st, even if they fall on the same calendar line)
+                    j[e] || (j[e] = [t.value[0][0], 0]),# If we've not already initialized this key, create it with [First_Date, 0]
+                    j[e][1] += 1                        # Increment this month's counter by one
+            }),
+            j = d3.entries(j).sort(function(t, e) {     # Convert hash of j[$month-$year] = [first_day_a_week_starts_in_this_month, counter_of_weeks_that_begin_in_this_month] to array of {key, value} objects
+                    return d3.ascending(t.value[0], e.value[0])
+                }),
+            P = d3.tip().attr("class", "svg-tip").offset([-10, 0]).html(function(t) { # Used to make the tooltips for the grid
+                    var e;
+                    return
+                        e = 0 === t[1] ? "No" : t[1],   
+                        "<strong>" + e + " " + $.pluralize(t[1], "contribution") + "</strong> on " + moment(t[0]).format("MMMM Do YYYY")
+                }),
+            M = d3.select(this)                         # Time to build the graph
+                .append("svg")                          # Add the SVG
+                .attr("width", c)                       # With the right width
+                .attr("height", e)                      # And the right height
+                .attr("id", "calendar-graph")           # Add the CSS ID
+                .append("g")                            # GitHub uses SVG groups to line up the cells
+                .attr("transform", "translate(" + r + ", " + s + ")") # This does the offset, shifting the start of the cells 20 units right and 20 down
+                .call(P),                               # Adds P above as a callback for mouseover
+            B = 0,                                      # Counter for O below
+            D = (new Date).getFullYear(),               # Get the current year
+            O = M.selectAll("g.week")                   # Lets build out the groups
+                .data(I)                                # Using our array of {key: ${year}${week_number}, value: [[Date, score], ...]} objects
+                .enter().append("g")                    # Add a group for each week
+                .attr("transform", function(e, n) {     # Add the transform to position it
+                    var r;
+                    return
+                        r = e.value[0][0],              # Set r to the date of the first day of the week
+                        r.getFullYear() === D && 0 !== r.getDay() && 0 === B && (B = -1), # If this week started in this year and this day isn't Sunday and B is 0, set B to -1
+                        "translate(" + (n + B) * t + ", 0)" # Shift this group ($index + $offset) * $cell_size to the right
+                }),
+            S = O.selectAll("rect.day").data(function(t) { # Now lets build out each day's cell
+                    return t.value                      # Using the value for that day
+                }).enter().append("rect")               # Make a new rectangle
+                .attr("class", "day")                   # Add the CSS class
+                .attr("width", t - i)                   # Set the width to cell size minus padding
+                .attr("height", t - i)                  # Likewise for the height
+                .attr("y", function(e) {                # Set the y coord to $weekday * $cell_size
+                    return h(e[0]) * t
+                })
+                .style("fill", function(t) {            # Set the color based on the quartile map function
+                    return 0 === t[1] ? "#eee" : m(t[1])
+                })
+                .on("click", function(t) {              # Set the on-click action to hilight the cell
+                    return $(document).trigger("contributions:range", [t[0], d3.event.shiftKey])
+                })
+                .on("mouseover", P.show)                # Set the mouseover action to show the tooltip
+                .on("mouseout", P.hide),                # And the mouseout to hide it
+            d = 0,                                      # Offset for use in making month labels
+            M.selectAll("text.month")                   # Now we're working on months
+            .data(j)                                    # Using the $month-$year mapping
+            .enter().append("text")                     # Make the text labels
+            .attr("x", function(e) {                    # Set the x coordinate to $cell_size * $offset
+                var n;
+                return
+                    n = t * d,                          # Calculate $cell_size * $offset
+                    d += e.value[1],                    # Then increment the offset by the size of this month
+                    n                                   # Then return the previously calculated value
+            })
+            .attr("y", -5)                              # Set the y coord
+            .attr("class", "month")                     # Class it up
+            .style("display", function(t) {             # If it would be on the very left edge, hide it
+                return t.value[1] <= 2 ? "none" : void 0
+            })
+            .text(function(t) {                         # The text is the abbreviated month name ("Jan")
+                return y(t.value[0])
+            }),
+            M.selectAll("text.day")                     # Now build the text for weekdays
+            .data(["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]) # Define our weekdays
+            .enter().append("text")                     # They're text objects
+            .style("display", function(t, e) {          # Only show the odd-index days (Monday, Wednesday, Friday)
+                return 0 === e % 2 ? "none" : void 0
+            })
+            .attr("text-anchor", "middle")              # Set some CSS properties for display
+            .attr("class", "wday")                      # And a class for formatting
+            .attr("dx", -10)                            # Set the x coord
+            .attr("dy", function(e, n) {                # The y coord is $graph_y_offset + ($index - 1) * $cell_size + $padding + $cell_offset
+                return s + ((n - 1) * t + i)
+            })
+            .text(function(t) {                         # And the text is the first letter of the weekday (why did we start with 3 letters anyways?)
+                return t[0]
+            }),
+            f || A ? $(document).trigger("contributions:range", [f, A]) : void 0 # if we're hilighting a specific day, call that
+{% endhighlight %}
+
 
 The very important thing to note, which threw me off for a long time, is that they use $week_number. This skews results for January, because January 1st is always the start of a new week_number, even if it falls mid-week. They count how many week_numbers start in each month and give each month label that many columns of space. They also check the front/end and hide the first/last label if they're going to overlap other labels.
 
