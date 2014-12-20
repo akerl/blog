@@ -51,7 +51,6 @@ The next component was getting the layout of the SVG right. Doing the grid squar
 
 {% gist akerl/43fa29c1cac775b65838 %}
 
-
 The very important thing to note, which threw me off for a long time, is that they use $week_number. This skews results for January, because January 1st is always the start of a new week_number, even if it falls mid-week. They count how many week_numbers start in each month and give each month label that many columns of space. They also check the front/end and hide the first/last label if they're going to overlap other labels.
 
 I spent a lot of time just tweaking pixel counts, and the end result was pixel-perfect matching to GitHub's graphs. For now. I seem to keep finding things that I need to tweak.
