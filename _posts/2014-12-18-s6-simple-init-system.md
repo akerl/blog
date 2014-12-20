@@ -21,32 +21,7 @@ Early init
 
 This stage starts when the initrd hands off control of the system to the rootfs. It moves the newly mounted root filesystem to `/` and execs your init process. The point of this stage is to set up the basic system to the point that service management can begin. When I started, I expected this to be pretty straightforward: make sure /proc, /sys, and friends are mounted and move on. I was mostly right, and I ended up with the following stage1 script:
 
-{% highlight shell %}
-#!/usr/bin/execlineb -P
-
-cd /
-umask 022
-fdclose 0
-fdclose 1
-fdclose 2
-
-redirfd -r 0 /dev/null
-foreground { mkdir -p /var/s6/ }
-redirfd -wnb 1 /var/s6/fifo
-fdmove -c 2 1
-
-background {
-    s6-setsid
-    forbacktickx i { ls /etc/s6/task }
-    import i
-    /etc/s6/task/${i}
-}
-unexport LASTPID
-
-s6-setsid
-s6-envdir /etc/s6/env
-s6-svscan -t0 /etc/s6/service
-{% endhighlight %}
+{% gist akerl/34196f0a07ed70b98942 %}
 
 The script uses [execline](http://skarnet.org/software/execline/), which is essentially a strict cousin of bash with more rigorous handling of conditionals and command parsing.
 
@@ -61,14 +36,7 @@ Normal operation
 
 This stage is pretty boring, which is intentional. s6-svscan is dead simple to understand: it watches a directory, and spawns an s6-supervise process for any directories inside. The s6-supervise process runs `./{directory}/run`, which should run whatever the service is in the foreground. If the process dies, s6-supervise restarts it. If you want to stop it, just tell s6 to stop it. The run scripts thus end up looking super simple:
 
-{% highlight shell %}
-#!/usr/bin/env sh
-
-mkdir -p /var/lib/docker
-mountpoint -q /var/lib/docker/ || mount /dev/mapper/luks-docker /var/lib/docker
-
-exec /usr/local/sbin/docker -d --iptables=false --ip-masq=false -b=docker0 -s overlay
-{% endhighlight %}
+{% gist akerl/dcee8549a65cfb5b5ae3 %}
 
 The primary issue here is making sure all your processes run in the foreground, but everything I've wanted to run thus far has either defaulted to that or had an easy flag for foreground operation.
 
@@ -83,31 +51,7 @@ That said, my main issue was getting the system to enter stage 3 at all. Crazy, 
 
 Once that was sorted, the actual stage 3 code was easy:
 
-{% highlight shell %}
-#!/usr/bin/execlineb -S0
-
-cd /
-fdclose 0
-redirfd -w 1 /dev/console
-fdmove -c 2 1
-
-foreground { echo "Syncing disks." }
-foreground { sync }
-
-
-foreground { echo "Sending all processes the TERM signal." }
-foreground { kill -15 -1 }
-foreground { sleep 3 }
-foreground { echo "Sending all processes the KILL signal." }
-foreground { kill -9 -1 }
-
-wait { }
-
-foreground { echo "Syncing disks." }
-foreground { sync }
-
-foreground { reboot -h }
-{% endhighlight %}
+{% gist akerl/f9dee1d69f9124c624e7 %}
 
 It reclaims control of the console for stdout/err, syncs the disks, kills the processes (first gracefully, then hard), waits for them to be reaped, then syncs again and reboots.
 
@@ -116,17 +60,7 @@ Final product
 
 The end result is a fully functional init system for my VM:
 
-{% highlight shell %}
-[root@grego ~]# pstree
-s6-svscan─┬─gpg-agent
-          ├─s6-supervise───agetty
-          ├─s6-supervise───sshd─┬─sshd───bash
-          │                     └─sshd───bash───pstree
-          ├─s6-supervise───radvd───radvd
-          ├─s6-supervise───docker───6*[{docker}]
-          ├─s6-supervise───haveged
-          └─s6-supervise───ntpd───{ntpd}
-{% endhighlight %}
+{% gist akerl/f4d6f57c97b2c44b8df8 %}
 
 There were some definite "gotcha" moments while building it, and overall I feel like it was very educational. Things like "wow, I guess I have to write something to load /etc/hostname into the running system" and having to template out my own network configs rather than leaning on a larger tool were very eye-opening experiences, and it gives a great perspective on the things most folks take for granted about their operating system.
 
