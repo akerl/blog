@@ -82,3 +82,28 @@ body {
     font-size: 1.25em;
 }
 
+.footer {
+    width: 100%;
+    float: left;
+}
+
+.footer ul {
+    width:100%;
+    float: left;
+    padding-bottom: 20px;
+    text-align:center;
+}
+
+.footer li:before {
+    content: "|";
+    padding: 0 .5em;
+}
+
+.footer li:first-child:before {
+    content: "";
+    padding: 0;
+}
+
+.footer li {
+        display:inline-block;
+}
