@@ -1,9 +1,9 @@
 blog
 =========
 
-[![Dependency Status](https://img.shields.io/gemnasium/akerl/blog.svg)](https://gemnasium.com/akerl/blog)
-[![Build Status](https://img.shields.io/travis/akerl/blog.svg)](https://travis-ci.org/akerl/blog)
-[![CC-SA Licensed](http://img.shields.io/badge/license-CC--BY--SA-green.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![Dependency Status](https://img.shields.io/gemnasium/akerl/blog.svg?style=flat)](https://gemnasium.com/akerl/blog)
+[![Build Status](https://img.shields.io/travis/akerl/blog.svg?style=flat)](https://travis-ci.org/akerl/blog)
+[![CC-SA Licensed](http://img.shields.io/badge/license-CC--BY--SA-green.svg?style=flat)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 My personal blog. Generation of the site is done using [Jekyll](http://jekyllrb.com/).
 
