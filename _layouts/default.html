@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ page.title }}</title>
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600">
+        {% stylesheet fontawesome/css/fontawesome %}
+        {% stylesheet bijou/main %}
+        {% stylesheet custom/main %}
+        {% stylesheet highlighting/main %}
     </head>
     <body>
         <div class="navbar fixed">
@@ -35,9 +40,4 @@
         </div>
     </body>
 </html>
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600">
-{% stylesheet fontawesome/css/fontawesome %}
-{% stylesheet bijou/main %}
-{% stylesheet custom/main %}
-{% stylesheet highlighting/main %}
 {% javascript google/analytics %}
