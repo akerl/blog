@@ -6,7 +6,7 @@ gem 'jekyll-assets', '~> 0.13.0'
 gem 'uglifier', '~> 2.7.0'
 gem 'sass', '~> 3.4.1'
 gem 'therubyracer', '~> 0.12.1'
-gem 'rouge', '~> 1.7.4'
+gem 'rouge', '~> 1.8.0'
 
 group :development do
   gem 'rubocop', '~> 0.28.0'
