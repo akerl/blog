@@ -9,26 +9,11 @@
   image: https://cdn.shopify.com/s/files/1/0051/4802/products/MG_0586_1024x1024.jpg?v=1314827144
   url: https://github.myshopify.com/products/open-source-nerd-merit-badge
   price: 6
-- name: Octopint glasses
-  tagline: Something to put tasty beverages in
-  image: https://cdn.shopify.com/s/files/1/0051/4802/products/pint_1024x1024.jpg?v=1378921154
-  url: https://github.myshopify.com/products/octopint-set-of-2
-  price: 16
 - name: GitHub coasters
   tagline: For setting octopint glasses on
   image: https://cdn.shopify.com/s/files/1/0051/4802/products/MG_9992_1024x1024.jpg?v=1378921315
   url: https://github.myshopify.com/products/cork-coasters
   price: 5
-- name: Risk
-  tagline: The game of global domination!
-  image: http://ecx.images-amazon.com/images/I/91FN3ci4xKL._SL1500_.jpg
-  url: http://www.amazon.com/RISK-28720-Risk-Game/dp/B004MRZGC4/
-  price: 30
-- name: Settlers of Catan
-  tagline: On the Road to Settlement!
-  image: http://images.amazon.com/images/G/01/toys/detail-page/B000W7JWUA-2-sm.jpg
-  url: http://www.amazon.com/MayFair-Games-MFG3061-Settlers-Catan/dp/B000W7JWUA/
-  price: 42
 - name: Ticket To Ride
   tagline: All aboard!
   image: http://ecx.images-amazon.com/images/I/61dDQUfhuvL.jpg
@@ -59,21 +44,6 @@
   image: http://a.tgcdn.net/images/products/frontsquare/158e_hobbit_no_admittance_except_on_party_business_magnet.jpg
   url: http://www.thinkgeek.com/product/158e/
   price: 7
-- name: Apple Thunderbolt Display
-  tagline: See stuff, bigger and clearer
-  image: http://store.storeimages.cdn-apple.com/4124/as-images.apple.com/is/image/AppleInc/aos/published/images/M/C9/MC914/MC914
-  url: http://store.apple.com/us/product/MC914LL/B/apple-thunderbolt-display-27-inch
-  price: 1000
-- name: Apple Keyboard with Numeric Keypad
-  tagline: For making words and such
-  image: http://store.storeimages.cdn-apple.com/4124/as-images.apple.com/is/image/AppleInc/aos/published/images/M/B1/MB110LL/MB110LL
-  url: http://store.apple.com/us/product/MB110LL/B/apple-keyboard-with-numeric-keypad-english-usa
-  price: 50
-- name: Magic Trackpad
-  tagline: For moving things with your mind (and fingers)
-  image: http://store.storeimages.cdn-apple.com/4124/as-images.apple.com/is/image/AppleInc/aos/published/images/M/C3/MC380/MC380
-  url: http://store.apple.com/us/product/MC380LL/A/magic-trackpad
-  price: 70
 - name: JayBird BlueBuds X Premium Bluetooth Headphones
   tagline: Like music to my ears
   image: http://store.storeimages.cdn-apple.com/4124/as-images.apple.com/is/image/AppleInc/aos/published/images/H/B2/HB235/HB235
@@ -85,36 +55,11 @@
   image: https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRZ_oU4qgT7jaaoQwcK5knYcnxikvwRJSN6szNy4z0FRlkhATqe
   url: https://store.nest.com/product/thermostat/
   price: 250
-- name: Automatic
-  tagline: Hook your car to the cloud
-  image: http://g-ec2.images-amazon.com/images/G/01/automotive/detail-page/AutomaticLink1.jpg
-  url: https://www.automatic.com/order/
-  price: 100
-- name: Super Smash Bros for Wii U
-  tagline: Yay comic violence
-  image: http://ecx.images-amazon.com/images/I/A1M9vDLg1DL._SL1500_.jpg
-  url: http://www.amazon.com/Super-Smash-Bros-Nintendo-Wii-U/dp/B00DD0B0BM/
-  price: 60
-- name: Hyrule Warriors
-  tagline: Latest Zelda game
-  image: http://ecx.images-amazon.com/images/I/91Lj41PQELL._SL1500_.jpg
-  url: http://www.amazon.com/Hyrule-Warriors-Nintendo-Wii-U/dp/B00KWEHBAG/
-  price: 50
 - name: Nintendo Pro Controller for Wii U
   tagline: Buttons made for smashing
   image: http://ecx.images-amazon.com/images/I/51vGHXaKM-L._SL1029_.jpg
   url: http://www.amazon.com/Nintendo-Pro-Controller-Black-Wii-u/dp/B00MUY0OFU/
   price: 50
-- name: Gun cleaning mat
-  tagline: Don't care about the particular model, just want a mat
-  image: https://a248.e.akamai.net/f/248/9086/10h/origin-d4.scene7.com/is/image/GanderMountainOvertons/815005_L1?$highres3$
-  url: http://www.gandermountain.com/modperl/product/details.cgi?pdesc=Drymate-16-x-54-Gun-Cleaning-Pad-Green&i=815005
-  price: 15
-- name: Caldwell E-Max Low-Profile Hearing Protection
-  tagline: I'm not listening
-  image: https://a248.e.akamai.net/f/248/9086/10h/origin-d4.scene7.com/is/image/GanderMountainOvertons/420702_L1
-  url: http://www.gandermountain.com/modperl/product/details.cgi?pdesc=Caldwell-E-Max-Low-Profile-Hearing-Enhancement-Protection&i=420702
-  price: 35
 - name: Patagonia Black Hole Pack 25L
   tagline: For carrying my things and stuff
   image: http://www.patagonia.com/tsimages/49295_155.fpx?cvt=jpeg
