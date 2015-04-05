@@ -54,7 +54,7 @@ The first few things I used this process with were my own packages, so I got to 
 
 Obviously, for things that already have a version number, this doesn't work as well. I did want to track a patch number so I could tell one build from the next, so I settled on appending my patch number, and split that out into its own target:
 
-([full Makefile here](https://github.com/akerl/s6/blob/master/Makefile))
+([full Makefile here](https://github.com/amylum/s6/blob/master/Makefile))
 
 {% gist akerl/0a271bcf160fb218f7d7 %}
 
