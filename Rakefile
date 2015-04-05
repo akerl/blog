@@ -13,7 +13,7 @@ end
 
 desc 'Check all external links'
 task :check_links do
-  LinkChecker.new.check_uris
+  LinkChecker.new(target: '.').check_uris
 end
 
 desc 'Build the site'
