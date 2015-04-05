@@ -11,14 +11,14 @@ RuboCop::RakeTask.new(:rubocop) do |task|
   task.fail_on_error = true
 end
 
-desc 'Check all external links'
-task :check_links do
-  LinkChecker.new(target: '.').check_uris
-end
-
 desc 'Build the site'
 task :build do
   fail unless system 'jekyll build'
 end
 
-task default: [:spec, :rubocop, :check_links, :build]
+desc 'Check all external links'
+task :check_links do
+  LinkChecker.new(target: '_build').check_uris
+end
+
+task default: [:spec, :rubocop, :build, :check_links]
