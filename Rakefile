@@ -18,7 +18,9 @@ end
 
 desc 'Check all external links'
 task :check_links do
-  LinkChecker.new(target: '_build').check_uris
+  LinkChecker.new(
+    target: '_build', options: { warnings_are_errors: true }
+  ).check_uris
 end
 
 task default: [:spec, :rubocop, :build, :check_links]
