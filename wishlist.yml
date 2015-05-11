@@ -4,52 +4,21 @@
   image: http://cdn.shopify.com/s/files/1/0506/0633/products/scishow-mug-1_large.jpg?v=1408478946
   url: http://store.dftba.com/products/scishow-logo-mug
   price: 12
-- name: GitHub merit badge
-  tagline: Scouting badge commemorating love of open source
-  image: https://cdn.shopify.com/s/files/1/0051/4802/products/MG_0586_1024x1024.jpg?v=1314827144
-  url: https://github.myshopify.com/products/open-source-nerd-merit-badge
-  price: 6
-- name: GitHub coasters
-  tagline: For setting octopint glasses on
-  image: https://cdn.shopify.com/s/files/1/0051/4802/products/MG_9992_1024x1024.jpg?v=1378921315
-  url: https://github.myshopify.com/products/cork-coasters
-  price: 5
 - name: Ticket To Ride
   tagline: All aboard!
   image: http://ecx.images-amazon.com/images/I/61dDQUfhuvL.jpg
   url: http://www.amazon.com/Days-of-Wonder-DOW-7201/dp/0975277324/
   price: 50
-- name: ACR122U NFC USB Reader and Writer
-  tagline: For all your wireless datasharing needs
-  image: http://dioqew5xb7ot2.cloudfront.net/media/catalog/product/cache/1/image/265x265/9df78eab33525d08d6e5fb8d27136e95/a/c/acs-acr122u-gtt_1.jpg
-  url: http://www.buynfctags.com/nfc-readers-and-writers/acs-acr122u-nfc-usb-reader-and-writer.html
-  price: 45
 - name: Up Goer Five Poster
   tagline: Simple stuff, really
   image: http://cdn.shopify.com/s/files/1/0149/3544/products/upgoerfive-1_a38d4df7-5b05-4d7a-a9da-440f85f177bc_1024x1024.png?v=1385978878
   url: http://store.xkcd.com/collections/posters/products/up-goer-five-poster
   price: 15
-- name: Boa squeeze
-  tagline: Commuter backpack
-  image: http://www.booqbags.com/images/products_1600h/BSQ-GFT4.jpg
-  url: http://www.booqbags.com/us/backpacks/boa-squeeze/BSQ-GFT
-  price: 130
-- name: BACtrack Vio
-  tagline: Bluetooth App Enabled Breathalyzer
-  image: http://a.tgcdn.net/images/products/frontsquare/210b_bactrack_vio_bluetooth_app_breathalyzer.jpg
-  url: http://www.thinkgeek.com/product/210b/
-  price: 50
-- name: Hobbit sign
-  tagline: No Admittance Except on Party Business
-  image: http://a.tgcdn.net/images/products/frontsquare/158e_hobbit_no_admittance_except_on_party_business_magnet.jpg
-  url: http://www.thinkgeek.com/product/158e/
-  price: 7
 - name: JayBird BlueBuds X Premium Bluetooth Headphones
   tagline: Like music to my ears
-  image: http://store.storeimages.cdn-apple.com/4124/as-images.apple.com/is/image/AppleInc/aos/published/images/H/B2/HB235/HB235
-  url: http://store.apple.com/us/product/HB235VC/A/jaybird-bluebuds-x-premium-bluetooth-headphones
+  image: http://ecx.images-amazon.com/images/I/51QE5H9ZmRL._SL1000_.jpg
+  url: http://www.amazon.com/dp/B00AIRUOI8
   price: 170
-  extra: black
 - name: Nest
   tagline: Hook your house to the cloud
   image: https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRZ_oU4qgT7jaaoQwcK5knYcnxikvwRJSN6szNy4z0FRlkhATqe
