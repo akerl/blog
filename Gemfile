@@ -6,7 +6,7 @@ gem 'jekyll-assets', '~> 0.14.0'
 gem 'uglifier', '~> 2.7.0'
 gem 'sass', '~> 3.4.1'
 gem 'therubyracer', '~> 0.12.1'
-gem 'rouge', '~> 1.8.0'
+gem 'rouge', '~> 1.9.0'
 gem 'link-checker', '~> 0.7.2'
 
 group :development do
