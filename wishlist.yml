@@ -3,7 +3,7 @@
   tagline: Cute mug with SciShow logo on it
   image: http://cdn.shopify.com/s/files/1/0506/0633/products/scishow-mug-1_large.jpg?v=1408478946
   url: http://store.dftba.com/products/scishow-logo-mug
-  price: 12
+  price: 13
 - name: Ticket To Ride
   tagline: All aboard!
   image: http://ecx.images-amazon.com/images/I/61dDQUfhuvL.jpg
@@ -11,7 +11,7 @@
   price: 50
 - name: Up Goer Five Poster
   tagline: Simple stuff, really
-  image: http://cdn.shopify.com/s/files/1/0149/3544/products/upgoerfive-1_a38d4df7-5b05-4d7a-a9da-440f85f177bc_1024x1024.png?v=1385978878
+  image: http://cdn.shopify.com/s/files/1/0149/3544/products/upgoerfive-1_0e2ceb57-c3e7-4847-8f39-406788c60060_large.png?v=1417629417
   url: http://store.xkcd.com/collections/posters/products/up-goer-five-poster
   price: 15
 - name: JayBird BlueBuds X Premium Bluetooth Headphones
@@ -21,7 +21,7 @@
   price: 170
 - name: Nest
   tagline: Hook your house to the cloud
-  image: https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRZ_oU4qgT7jaaoQwcK5knYcnxikvwRJSN6szNy4z0FRlkhATqe
+  image: https://store.nest.com/assets/store/products/thermostat/slide1_2x-a2430e3ee5d884d680df504b524842d4.png
   url: https://store.nest.com/product/thermostat/
   price: 250
 - name: Nintendo Pro Controller for Wii U
@@ -29,8 +29,23 @@
   image: http://ecx.images-amazon.com/images/I/51vGHXaKM-L._SL1029_.jpg
   url: http://www.amazon.com/Nintendo-Pro-Controller-Black-Wii-u/dp/B00MUY0OFU/
   price: 50
-- name: Patagonia Black Hole Pack 25L
+- name: Patagonia Black Hole Pack 25L (Black)
   tagline: For carrying my things and stuff
   image: http://www.patagonia.com/tsimages/49295_155.fpx?cvt=jpeg
   url: http://www.patagonia.com/us/product/black-hole-pack-25-liter?p=49295-0-155
   price: 130
+- name: Yubikey NEO
+  tagline: Security on a stick
+  image: https://www.yubico.com/wp-content/uploads/2015/05/YubiKey-NEO-NEO-n-444x444.png
+  url: http://www.amazon.com/Yubico-Y-072-YubiKey-NEO/dp/B00LX8KZZ8/
+  price: 50
+- name: Fishing tackle rack
+  tagline: Stacking things was never this much fun
+  image: http://www.dickssportinggoods.com/graphics/product_images/pDSP1-18508657p275w.jpg
+  url: http://www.amazon.com/gp/product/B007RGARB2/
+  price: 20
+- name: George Foreman Evolve Grill
+  tagline: Fooooooooood
+  image: http://cdn.spectrumbrands.com/media/hobbs/images/gfm/360/S_Closed/1.jpg?v=d
+  url: http://www.amazon.com/George-Foreman-GRP4842P-Evolve-Platinum/dp/B00NPYK18O/
+  price: 120
