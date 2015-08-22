@@ -29,3 +29,13 @@
   image: http://cdn2.bigcommerce.com/server2200/48575/products/38/images/179/IMG_0379__23186.1349681231.350.350.JPG
   url: http://www.emmrod.com/kayak-king-spin-pole/#
   price: 80
+- name: STM Aero Backpack
+  tagline: Take things from over here and carry them over there
+  image: http://ecx.images-amazon.com/images/I/91Jo7qj4mmL._SL1500_.jpg
+  url: http://www.amazon.com/gp/product/B00IYJD4Z2
+  price: 80
+- name: The Anchor
+  tagline: Hold my headphones, dear
+  image: http://ecx.images-amazon.com/images/I/61p%2BROszdAL._SL1500_.jpg
+  url: http://www.amazon.com/gp/product/B00P31BMHG
+  price: 20
