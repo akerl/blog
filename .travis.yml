@@ -3,7 +3,7 @@ cache: bundler
 sudo: false
 bundler_args: --without ""
 rvm:
-- 2.2.2
+- 2.2.3
 notifications:
   email: false
   irc:
