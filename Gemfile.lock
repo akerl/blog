@@ -138,7 +138,7 @@ GEM
     toml (0.1.2)
       parslet (~> 1.5.0)
     trollop (2.1.2)
-    uglifier (2.7.1)
+    uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     yajl-ruby (1.2.1)
