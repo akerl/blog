@@ -96,7 +96,7 @@ GEM
     redcarpet (3.3.2)
     ref (2.0.0)
     robotex (1.0.0)
-    rouge (1.10.0)
+    rouge (1.10.1)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
