@@ -39,3 +39,13 @@
   image: http://ecx.images-amazon.com/images/I/61p%2BROszdAL._SL1500_.jpg
   url: http://www.amazon.com/gp/product/B00P31BMHG
   price: 20
+- name: Fluxx
+  tagline: The most complicated simple game ever
+  image: http://ecx.images-amazon.com/images/I/91N%2Br-rgaNL._SL1500_.jpg
+  url: http://www.amazon.com/Looney-Labs-001LOO-Fluxx-4-0/dp/192978001X/
+  price: 20
+- name: Ticket to Ride, The Heart of Africa, Volume 3
+  tagline: Like ticket to ride, but in an imaginary place you've never heard of
+  image: http://ecx.images-amazon.com/images/I/91FtAV27xcL._SL1500_.jpg
+  url: http://www.amazon.com/Ticket-Ride-Collection-Board-Game/dp/B00ADB7BY4/
+  price: 25
