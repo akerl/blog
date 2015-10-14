@@ -114,7 +114,7 @@ GEM
       ruby-progressbar (~> 1.4)
     ruby-progressbar (1.7.5)
     safe_yaml (1.0.4)
-    sass (3.4.18)
+    sass (3.4.19)
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
