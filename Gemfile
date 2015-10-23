@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll', '~> 2.5.0'
+gem 'jekyll-gist', git: 'https://github.com/akerl/jekyll-gist', branch: 'utf8-fix'
 gem 'kramdown', '~> 1.9.0'
 gem 'jekyll-assets', '~> 1.0.0'
 gem 'uglifier', '~> 2.7.0'
