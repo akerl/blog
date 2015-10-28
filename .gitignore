@@ -3,3 +3,4 @@ coverage/
 .coveralls.yml
 .bundle
 _build/
+.jekyll-metadata
