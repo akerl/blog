@@ -17,6 +17,7 @@ excerpt_separator: "<!--more-->"
 
 gems:
 - jekyll-assets
+- jekyll-gist
 
 assets:
   cachebust: hard
