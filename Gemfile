@@ -11,7 +11,7 @@ gem 'rouge', '~> 1.10.0'
 gem 'link-checker', '~> 0.7.2'
 
 group :development do
-  gem 'rubocop', '~> 0.34.0'
+  gem 'rubocop', '~> 0.35.0'
   gem 'rake', '~> 10.4.0'
   gem 'rspec', '~> 3.3.0'
   gem 'fuubar', '~> 2.0.0'
