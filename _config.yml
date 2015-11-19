@@ -20,11 +20,13 @@ gems:
 - jekyll-gist
 
 assets:
-  cachebust: hard
+  compress:
+    css: true
+    js: true
+  digest: true
+  cache: false
   sources:
   - _assets
-  js_compressor: uglifier
-  css_compressor: sass
 
 permalink: pretty
 
