@@ -27,7 +27,7 @@ GEM
       mercenary (~> 0.3.3)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-assets (2.0.1)
+    jekyll-assets (2.0.2)
       fastimage (~> 1.8)
       jekyll (~> 3.0)
       sprockets (~> 3.3)
