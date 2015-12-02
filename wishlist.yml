@@ -16,7 +16,7 @@
   price: 170
 - name: Nest
   tagline: Hook your house to the cloud
-  image: https://store.nest.com/assets/store/products/thermostat/slide1_2x-a2430e3ee5d884d680df504b524842d4.png
+  image: https://store.nest.com/assets/images/store/products/thermostat/d3/gallery/f/slide1_2x-cddf54200b0a87520c4c1b61ea4b4f8c.png
   url: https://store.nest.com/product/thermostat/
   price: 250
 - name: Yubikey NEO
@@ -49,3 +49,53 @@
   image: http://ecx.images-amazon.com/images/I/91FtAV27xcL._SL1500_.jpg
   url: http://www.amazon.com/Ticket-Ride-Collection-Board-Game/dp/B00ADB7BY4/
   price: 25
+- name: USB-C charging cable
+  tagline: For charging my macbook
+  image: http://store.storeimages.cdn-apple.com/4849/as-images.apple.com/is/image/AppleInc/aos/published/images/M/JW/MJWT2/MJWT2
+  url: http://www.apple.com/shop/product/MJWT2AM/A/usb-c-charge-cable-2m
+  price: 30
+- name: USB-C power adapter
+  tagline: For chargine my macbook
+  image: http://store.storeimages.cdn-apple.com/4849/as-images.apple.com/is/image/AppleInc/aos/published/images/M/J2/MJ262/MJ262
+  url: http://www.apple.com/shop/product/MJ262LL/A/apple-29w-usb-c-power-adapter
+  price: 50
+- name: Magic Trackpad 2
+  tagline: Wireless Magic Cloud Touch Technology
+  image: http://store.storeimages.cdn-apple.com/4849/as-images.apple.com/is/image/AppleInc/aos/published/images/M/J2/MJ2R2/MJ2R2_AV5
+  url: http://www.apple.com/shop/product/MJ2R2LL/A/magic-trackpad-2
+  price: 130
+- name: Magic Keyboard
+  tagline: Wireless Cloud Finger Synergy Clicker
+  image: http://store.storeimages.cdn-apple.com/4849/as-images.apple.com/is/image/AppleInc/aos/published/images/M/LA/MLA22LL/MLA22LL
+  url: http://www.apple.com/shop/product/MLA22LL/A/magic-keyboard-us-english
+  price: 100
+- name: Plano Handgun Hinged-Top 100 Round Ammo Box in 9mm-.380 Auto
+  tagline: For holding my .380 ammo gently
+  image: https://basspro.scene7.com/is/image/BassPro/1811382_10212847
+  url: http://www.basspro.com/Plano-Handgun-HingedTop-100-Round-Ammo-Boxes/product/10212847/
+  price: 7
+- name: Plano Rifle Hinged-Top 50 Round Ammo Boxes for .22-250/30-30
+  tagline: For holding my .223 ammo gently
+  image: https://basspro.scene7.com/is/image/BassPro/1811429_10212845
+  url: http://www.basspro.com/Plano-Rifle-HingedTop-50-Round-Ammo-Boxes/product/10212845/
+  price: 8
+- name: MTM Deluxe 100 Round Shotshell Case
+  tagline: For holding my 12 gauge shells
+  image: https://basspro.scene7.com/is/image/BassPro/1591939_10202163
+  url: http://www.basspro.com/MTM-Deluxe-100-Round-Shotshell-Case/product/10202163/
+  price: 25
+- name: White River Fly Shop Magnetic Net Release Clip
+  tagline: For holding my net until it holds my fish
+  image: https://basspro.scene7.com/is/image/BassPro/1987747_1212200625443
+  url: http://www.basspro.com/White-River-Fly-Shop-Magnetic-Net-Release-Clip/product/1212200625443/
+  price: 15
+- name: Cabela's Wind River Combo 865-4
+  tagline: I've heard fly fishing is at least three times cooler
+  image: http://images.cabelas.com/is/image/Cabelas/s7_322084_999_01
+  url: http://www.cabelas.com/product/fishing/rod-reel-combos/fly-fishing-rod-reel-combos%7C/pc/104793480/c/104762880/sc/105571980/cabela-s-wind-river-combo/1342342.uts?destination=%2Fcatalog%2Fbrowse.cmd%3FN%3D1104843
+  price: 120
+- name: Octopint glasses 
+  tagline: Does not hold 8 pints
+  image: https://cdn.shopify.com/s/files/1/0051/4802/products/pint_1024x1024.jpg?v=1378921154
+  url: https://github.myshopify.com/products/octopint-set-of-2
+  price: 16
