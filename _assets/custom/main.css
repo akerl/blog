@@ -107,3 +107,14 @@ body {
 .footer li {
         display:inline-block;
 }
+
+.post img {
+    float: right;
+    margin: 10px 20px;
+    -moz-box-shadow: 0px 0px 7px #000000;
+    -webkit-box-shadow: 0px 0px 7px #000000;
+    box-shadow: 0px 0px 7px #000000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
