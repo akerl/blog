@@ -7,6 +7,14 @@
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600">
         <link rel="stylesheet" type="text/css" href="/assets/fontawesome/css/fontawesome-files.css">
+        <meta name="og:type" content="article" />
+        <meta name="og:title" content="{{ page.title }}" />
+        <meta name="og:url" content="{{ page.url }}" />
+        <meta name="og:image" content="{{ page.image }}" />
+        <meta name="og:description" content="{{ site.description }}" />
+        <meta name="og:site_name" content="{{ site.title }}" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="{{ site.data.social.twitter }}" />
         {% stylesheet fontawesome/css/fontawesome %}
         {% stylesheet bijou/main %}
         {% stylesheet custom/main %}
