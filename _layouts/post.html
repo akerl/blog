@@ -10,7 +10,10 @@ layout: default
             </h3>
         </div>
         <div class="post">
-            <img src="/images/{{ page.image }}.png" \>
+            <div class="post-image">
+                <img src="/images/{{ page.image }}.png" \>
+                <a href="{{ page.image_link }}">{{ page.image_attribution }}</a>
+            </div>
             {{ content }}
         </div>
     </div>
