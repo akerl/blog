@@ -9,11 +9,6 @@
   image: http://cdn.shopify.com/s/files/1/0149/3544/products/upgoerfive-1_0e2ceb57-c3e7-4847-8f39-406788c60060_large.png?v=1417629417
   url: http://store.xkcd.com/collections/posters/products/up-goer-five-poster
   price: 15
-- name: JayBird BlueBuds X Premium Bluetooth Headphones
-  tagline: Like music to my ears
-  image: http://ecx.images-amazon.com/images/I/51QE5H9ZmRL._SL1000_.jpg
-  url: http://www.amazon.com/dp/B00AIRUOI8
-  price: 170
 - name: Nest
   tagline: Hook your house to the cloud
   image: https://store.nest.com/assets/images/store/products/thermostat/d3/gallery/f/slide1_2x-cddf54200b0a87520c4c1b61ea4b4f8c.png
@@ -29,26 +24,6 @@
   image: http://cdn2.bigcommerce.com/server2200/48575/products/38/images/179/IMG_0379__23186.1349681231.350.350.JPG
   url: http://www.emmrod.com/kayak-king-spin-pole/#
   price: 80
-- name: STM Aero Backpack
-  tagline: Take things from over here and carry them over there
-  image: http://ecx.images-amazon.com/images/I/91Jo7qj4mmL._SL1500_.jpg
-  url: http://www.amazon.com/gp/product/B00IYJD4Z2
-  price: 80
-- name: The Anchor
-  tagline: Hold my headphones, dear
-  image: http://ecx.images-amazon.com/images/I/61p%2BROszdAL._SL1500_.jpg
-  url: http://www.amazon.com/gp/product/B00P31BMHG
-  price: 20
-- name: Fluxx
-  tagline: The most complicated simple game ever
-  image: http://ecx.images-amazon.com/images/I/91N%2Br-rgaNL._SL1500_.jpg
-  url: http://www.amazon.com/Looney-Labs-001LOO-Fluxx-4-0/dp/192978001X/
-  price: 20
-- name: Ticket to Ride, The Heart of Africa, Volume 3
-  tagline: Like ticket to ride, but in an imaginary place you've never heard of
-  image: http://ecx.images-amazon.com/images/I/91FtAV27xcL._SL1500_.jpg
-  url: http://www.amazon.com/Ticket-Ride-Collection-Board-Game/dp/B00ADB7BY4/
-  price: 25
 - name: USB-C charging cable
   tagline: For charging my macbook
   image: http://store.storeimages.cdn-apple.com/4849/as-images.apple.com/is/image/AppleInc/aos/published/images/M/JW/MJWT2/MJWT2
@@ -79,11 +54,6 @@
   image: https://basspro.scene7.com/is/image/BassPro/1811429_10212845
   url: http://www.basspro.com/Plano-Rifle-HingedTop-50-Round-Ammo-Boxes/product/10212845/
   price: 8
-- name: MTM Deluxe 100 Round Shotshell Case
-  tagline: For holding my 12 gauge shells
-  image: https://basspro.scene7.com/is/image/BassPro/1591939_10202163
-  url: http://www.basspro.com/MTM-Deluxe-100-Round-Shotshell-Case/product/10202163/
-  price: 25
 - name: White River Fly Shop Magnetic Net Release Clip
   tagline: For holding my net until it holds my fish
   image: https://basspro.scene7.com/is/image/BassPro/1987747_1212200625443
