@@ -1,6 +1,6 @@
 dependencies:
   override:
-    - 'rvm-exec 2.2.4 bundle install'
+    - 'rvm-exec 2.3.0 bundle install'
 test:
   override:
-    - 'rvm-exec 2.2.4 bundle exec rake'
+    - 'rvm-exec 2.3.0 bundle exec rake'
