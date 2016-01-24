@@ -1,7 +1,7 @@
 ruby '2.3.0'
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 3.0.0'
+gem 'jekyll', '~> 3.1.0'
 gem 'jekyll-gist', '~> 1.4.0'
 gem 'kramdown', '~> 1.9.0'
 gem 'jekyll-assets', '~> 2.1.0'
