@@ -89,7 +89,7 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.7.5)
     safe_yaml (1.0.4)
-    sass (3.4.21)
+    sass (3.4.22)
     sawyer (0.7.0)
       addressable (>= 2.3.5, < 2.5)
       faraday (~> 0.8, < 0.10)
@@ -105,7 +105,7 @@ GEM
     trollop (2.1.2)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
-    unicode-display_width (1.0.2)
+    unicode-display_width (1.0.3)
 
 PLATFORMS
   ruby
