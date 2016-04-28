@@ -23,6 +23,7 @@ And example output:
 This kind of output was amazingly useful for my use case at the time: it's lightweight, it was easy to set up, and for seeing "how does it affect my next 6 months if I crank up my 401k contributions", it did spendidly.
 
 Unfortunately, it has some shortcomings:
+
 * It operates with a single "pool"; there's no accounting for multiple savings accounts
 * Because of that, it can't model things like "put money into savings", which costs my checking account money but gives my savings account money
 * Most importantly for our purposes: it doesn't remember the past
