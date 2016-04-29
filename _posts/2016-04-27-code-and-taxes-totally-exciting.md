@@ -50,7 +50,7 @@ The 3rd means I can do so with code, by programmatically generating those future
 The Part You've Been Waiting For
 =======================
 
-Step 1 was to port my budget script so I could do ledger-format projections. Because I love composable libraries, I started by writing a lightweight tool that reads and writes basic ledger journals: https://github.com/akerl/libledger
+Step 1 was to port my budget script so I could do ledger-format projections. Because I love composable libraries, I started by writing a lightweight tool that reads and writes basic ledger journals: [libledger](https://github.com/akerl/libledger)
 
 This tool is used by my [ballista](https://github.com/akerl/ballista) gem, named for a seige weapon that projects missiles across the battlefield. Ballista consumes a YAML file that looks very similar to my original budget script's config, except with ledger-format account names:
 
