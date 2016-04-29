@@ -29,7 +29,7 @@ ln -s ~/.cloud/Google/Books ~/Books
 
 I then looked at a couple encryption methods, and settled on [EncFS](https://en.wikipedia.org/wiki/EncFS). It has the benefit of operating at the file level and thus playing nice with the continuous syncing done by these providers, as well as working with FUSE to allow easy mounting on OSX or Linux. I'm only using the encrypted stores on my Macs right now, but the ability to easily expand is nice.
 
-EncFS is packaged in [Homebrew](https://github.com/Homebrew/homebrew), but the package depends on the [OSXFUSE](http://osxfuse.github.io/) packaged in Homebrew, which requires full XCode to install. I already had OSXFUSE installed via their package, and I wasn't particularly keen on installing XCode just to install OSXFUSE a second time. Thankfully, Homebrew makes it pretty easy to modify install "formulas", so I adjusted the EncFS formula to skip the OSXFUSE dependency and use the pre-existing libs. I threw that in a gist, and installing it was just a matter of pointing brew at it:
+EncFS is packaged in [Homebrew](https://github.com/Homebrew/brew), but the package depends on the [OSXFUSE](http://osxfuse.github.io/) packaged in Homebrew, which requires full XCode to install. I already had OSXFUSE installed via their package, and I wasn't particularly keen on installing XCode just to install OSXFUSE a second time. Thankfully, Homebrew makes it pretty easy to modify install "formulas", so I adjusted the EncFS formula to skip the OSXFUSE dependency and use the pre-existing libs. I threw that in a gist, and installing it was just a matter of pointing brew at it:
 
 {% gist akerl/76fb0ff5716a49f08e9b %}
 
