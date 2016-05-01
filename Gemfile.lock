@@ -43,7 +43,7 @@ GEM
       sass (~> 3.4)
     jekyll-watch (1.4.0)
       listen (~> 3.0, < 3.1)
-    kramdown (1.11.0)
+    kramdown (1.11.1)
     libv8 (3.16.14.15)
     link-checker (0.7.2)
       anemone (~> 0.7.2)
