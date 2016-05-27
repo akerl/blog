@@ -57,5 +57,5 @@ So now you have a functional unit file. To keep me honest, here's [the real deal
 
 If you want to explore fancier options, I highly recommend starting with [the ArchWiki guide to unit files](https://wiki.archlinux.org/index.php/Systemd#Writing_unit_files) and using [the index of directives](https://www.freedesktop.org/software/systemd/man/systemd.directives.html) as a reference guide.
 
-If you think I'm totally wrong or I've been corrupted by system or some such, feel free to tweet angry messages at me.
+If you think I'm totally wrong or I've been corrupted by systemd or some such, feel free to tweet angry messages at me.
 
