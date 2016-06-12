@@ -66,7 +66,7 @@ GEM
     powerpack (0.1.1)
     rack (1.6.4)
     rainbow (2.1.0)
-    rake (11.2.0)
+    rake (11.2.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
