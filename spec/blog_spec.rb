@@ -1,4 +1,4 @@
-require 'rspec'
+require 'rspec'.freeze
 
 describe 'the blog' do
   it 'has no tests yet' do
