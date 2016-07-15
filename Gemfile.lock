@@ -19,7 +19,7 @@ GEM
       addressable (~> 2)
     ffi (1.9.14)
     forwardable-extended (2.6.0)
-    fuubar (2.1.0)
+    fuubar (2.1.1)
       rspec (~> 3.0)
       ruby-progressbar (~> 1.4)
     jekyll (3.1.6)
