@@ -29,26 +29,11 @@
   image: https://images-na.ssl-images-amazon.com/images/I/41oNhwTrzyL.jpg
   url: https://www.amazon.com/gp/product/B00P1RJ9LS/
   price: 200
-- name: 12 inch skillet
-  tagline: Who came up with the word skillet anyways?
-  image: https://images-na.ssl-images-amazon.com/images/I/21UQpzHn4FL.jpg
-  url: https://www.amazon.com/gp/product/B000GWG0T2/
-  price: 30
-- name: 12 inch covered skillet
-  tagline: For when I want my skillet to have a hat
-  image: https://images-na.ssl-images-amazon.com/images/I/61bbxtGewZL._SL1500_.jpg 
-  url: https://www.amazon.com/gp/product/B004WULC3I/
-  price: 40
 - name: Samsung Seagate 2TB Laptop drive
   tagline: More space for PS4 games
   image: https://images-na.ssl-images-amazon.com/images/I/41G%2B6GaAMnL.jpg
   url: https://www.amazon.com/gp/product/B00I8O6OQ4/
   price: 105
-- name: Programmable Crock Pot
-  tagline: Tasty food that cooks all day
-  image: https://images-na.ssl-images-amazon.com/images/I/81c-sSofeNL._SL1500_.jpg
-  url: https://www.amazon.com/Crock-Pot-SCCPVL610-S-Programmable-Cooker-6-Quart/dp/B004P2NG0K/
-  price: 50
 - name: Rocket League for PS4
   tagline: Soccer and race cars!
   image: https://images-na.ssl-images-amazon.com/images/I/81ZAzSOmB0L._AC_SL1500_.jpg
