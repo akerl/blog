@@ -19,8 +19,8 @@ GEM
       addressable (~> 2)
     ffi (1.9.14)
     forwardable-extended (2.6.0)
-    fuubar (2.1.1)
-      rspec (~> 3.0)
+    fuubar (2.2.0)
+      rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
     jekyll (3.2.1)
       colorator (~> 1.0)
@@ -115,7 +115,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  fuubar (~> 2.1.0)
+  fuubar (~> 2.2.0)
   jekyll (~> 3.2.0)
   jekyll-assets (~> 2.2.0)
   jekyll-gist (~> 1.4.0)
