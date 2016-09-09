@@ -1,6 +1,6 @@
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
-require 'link_checker'
+require 'html-proofer'
 
 desc 'Run tests'
 RSpec::Core::RakeTask.new(:spec)
@@ -16,11 +16,16 @@ task :build do
   fail unless system 'jekyll build'
 end
 
-desc 'Check all external links'
-task :check_links do
-  LinkChecker.new(
-    target: '_build', options: { warnings_are_errors: true }
-  ).check_uris
+desc 'Check rendered site'
+task :test do
+  HTMLProofer.check_directory(
+    './_build',
+    check_html: true,
+    validation: {
+      report_missing_names: true,
+      report_script_embeds: true
+    }
+  ).run
 end
 
-task default: [:spec, :rubocop, :build, :check_links]
+task default: [:spec, :rubocop, :build, :test]
