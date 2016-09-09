@@ -24,6 +24,9 @@ task :test do
     validation: {
       report_missing_names: true,
       report_script_embeds: true
+    },
+    typhoeus: {
+      ssl_verifypeer: false
     }
   ).run
 end
