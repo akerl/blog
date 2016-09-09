@@ -5,7 +5,7 @@ image: encrypted-cloud-storage
 ---
 It's pretty clear these days that {thing}-as-a-service is a powerful concept. That said, it involves a certain level of trust in whoever is providing the service. Part of that is the trust that they'll keep providing you the service, but on the tin-foil-hat side, you trust that they won't use the information you give them to your detriment. This is especially true for storage/hosting service providers, where you're quite literally handing your data to a 3rd party.
 
-I love Dropbox, but I'm not sure I'm ready to trust them with my secret plans for world domination. As such, I've decided that I'd like to add a layer of encryption on top of my Dropbox storage, as well as other similar providers. I looked around, and decided to work with [Dropbox](https://www.dropbox.com/referrals/NTI4NDIyODU4OQ), [Copy](https://www.copy.com/page/?r=YubGHw), and [Google Drive](https://drive.google.com). As a disclaimer, the Dropbox and Copy links include my referral code so I get extra space if you use them.
+I love Dropbox, but I'm not sure I'm ready to trust them with my secret plans for world domination. As such, I've decided that I'd like to add a layer of encryption on top of my Dropbox storage, as well as other similar providers. I looked around, and decided to work with [Dropbox](https://www.dropbox.com/referrals/NTI4NDIyODU4OQ), Copy (Update: the Copy service has shut down), and [Google Drive](https://drive.google.com). As a disclaimer, the Dropbox link includes my referral code so I get extra space if you use it.
 
 <!--more-->
 
@@ -29,7 +29,7 @@ ln -s ~/.cloud/Google/Books ~/Books
 
 I then looked at a couple encryption methods, and settled on [EncFS](https://en.wikipedia.org/wiki/EncFS). It has the benefit of operating at the file level and thus playing nice with the continuous syncing done by these providers, as well as working with FUSE to allow easy mounting on OSX or Linux. I'm only using the encrypted stores on my Macs right now, but the ability to easily expand is nice.
 
-EncFS is packaged in [Homebrew](https://github.com/Homebrew/brew), but the package depends on the [OSXFUSE](http://osxfuse.github.io/) packaged in Homebrew, which requires full XCode to install. I already had OSXFUSE installed via their package, and I wasn't particularly keen on installing XCode just to install OSXFUSE a second time. Thankfully, Homebrew makes it pretty easy to modify install "formulas", so I adjusted the EncFS formula to skip the OSXFUSE dependency and use the pre-existing libs. I threw that in a gist, and installing it was just a matter of pointing brew at it:
+EncFS is packaged in [Homebrew](https://github.com/Homebrew/brew), but the package depends on the [OSXFUSE](https://osxfuse.github.io/) packaged in Homebrew, which requires full XCode to install. I already had OSXFUSE installed via their package, and I wasn't particularly keen on installing XCode just to install OSXFUSE a second time. Thankfully, Homebrew makes it pretty easy to modify install "formulas", so I adjusted the EncFS formula to skip the OSXFUSE dependency and use the pre-existing libs. I threw that in a gist, and installing it was just a matter of pointing brew at it:
 
 {% gist akerl/76fb0ff5716a49f08e9b %}
 
