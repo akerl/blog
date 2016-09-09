@@ -1,6 +1,11 @@
 dependencies:
   override:
-  - 'for i in $(cat .circle-ruby) ; do rvm-exec $i bundle install || exit 1 ; done'
+  - rvm-exec $(cat .circle-ruby) bundle install
 test:
   override:
-  - 'for i in $(cat .circle-ruby) ; do rvm-exec $i bundle exec rake || exit 1 ; done'
+  - rvm-exec $(cat .circle-ruby) bundle exec rake
+deployment:
+  release:
+    branch: master
+    commands:
+    - aws s3 sync --delete _build/ s3://circle-akerl-blog/
