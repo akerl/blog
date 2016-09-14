@@ -1,6 +1,6 @@
 machine:
   environment:
-    BUCKET: circleci-akerl-blog
+    BUCKET: akerl-blog
 
 dependencies:
   override:
