@@ -8,7 +8,7 @@ gem 'jekyll-assets', '~> 2.2.0'
 gem 'uglifier', '~> 3.0.0'
 gem 'sass', '~> 3.4.1'
 gem 'therubyracer', '~> 0.12.1'
-gem 'html-proofer', '~> 3.1.0'
+gem 'html-proofer', '~> 3.2.0'
 
 group :development do
   gem 'rubocop', '~> 0.43.0'

@@ -26,7 +26,7 @@ GEM
     fuubar (2.2.0)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
-    html-proofer (3.1.0)
+    html-proofer (3.2.0)
       activesupport (>= 4.2, < 6.0)
       addressable (~> 2.3)
       colored (~> 1.2)
@@ -67,11 +67,10 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
     mini_portile2 (2.1.0)
-    minitest (5.9.0)
+    minitest (5.9.1)
     multipart-post (2.0.0)
-    nokogiri (1.6.8)
+    nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
-      pkg-config (~> 1.1.7)
     octokit (4.3.0)
       sawyer (~> 0.7.0, >= 0.5.3)
     parallel (1.9.0)
@@ -79,7 +78,6 @@ GEM
       ast (~> 2.2)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
-    pkg-config (1.1.7)
     powerpack (0.1.1)
     rack (1.6.4)
     rainbow (2.1.0)
@@ -93,7 +91,7 @@ GEM
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
       rspec-mocks (~> 3.5.0)
-    rspec-core (3.5.3)
+    rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -135,7 +133,7 @@ PLATFORMS
 
 DEPENDENCIES
   fuubar (~> 2.2.0)
-  html-proofer (~> 3.1.0)
+  html-proofer (~> 3.2.0)
   jekyll (~> 3.2.0)
   jekyll-assets (~> 2.2.0)
   jekyll-gist (~> 1.4.0)
@@ -151,4 +149,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.5
+   1.13.2
