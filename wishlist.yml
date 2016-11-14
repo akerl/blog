@@ -24,23 +24,8 @@
   image: http://us.vibram.com/dw/image/v2/AAWR_PRD/on/demandware.static/-/Sites-vbi-apparel-footwear/default/dw9d23f4ef/images/M07/black/hero.jpg
   url: http://us.vibram.com/shop/fivefingers/men/training-fitness/kso-evo/M07.html
   price: 90
-- name: Server Rack
-  tagline: Replace my hand-built wooden rack. 4 post 12U
-  image: https://images-na.ssl-images-amazon.com/images/I/41oNhwTrzyL.jpg
-  url: https://www.amazon.com/gp/product/B00P1RJ9LS/
-  price: 200
 - name: Samsung Seagate 2TB Laptop drive
   tagline: More space for PS4 games
   image: https://images-na.ssl-images-amazon.com/images/I/41G%2B6GaAMnL.jpg
   url: https://www.amazon.com/gp/product/B00I8O6OQ4/
   price: 105
-- name: Rocket League for PS4
-  tagline: Soccer and race cars!
-  image: https://images-na.ssl-images-amazon.com/images/I/81ZAzSOmB0L._AC_SL1500_.jpg
-  url: https://www.amazon.com/gp/product/B01D9T0A1C/
-  price: 30
-- name: Fishing rod cart
-  tagline: For storing all 3 of my fishing rods
-  image: https://basspro.scene7.com/is/image/BassPro/1811462_10215371
-  url: http://www.basspro.com/Bass-Pro-Shops-Rolling-Rod-Carts/product/10215371/
-  price: 75
