@@ -61,7 +61,7 @@ GEM
       sass (~> 3.4)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    kramdown (1.13.0)
+    kramdown (1.13.1)
     libv8 (3.16.14.17)
     liquid (3.0.6)
     listen (3.0.8)
@@ -73,9 +73,9 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
-    octokit (4.6.1)
+    octokit (4.6.2)
       sawyer (~> 0.8.0, >= 0.5.3)
-    parallel (1.9.0)
+    parallel (1.10.0)
     parser (2.3.2.0)
       ast (~> 2.2)
     pathutil (0.14.0)
@@ -149,7 +149,7 @@ DEPENDENCIES
   uglifier (~> 3.0.0)
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.3.3p222
 
 BUNDLED WITH
-   1.13.2
+   1.13.6
