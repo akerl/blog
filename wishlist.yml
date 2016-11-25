@@ -29,15 +29,52 @@
   image: https://images-na.ssl-images-amazon.com/images/I/41G%2B6GaAMnL.jpg
   url: https://www.amazon.com/gp/product/B00I8O6OQ4/
   price: 105
----
-https://www.bullpuparmory.com/product_p/tg-258.htm
-https://www.bullpuparmory.com/product_p/tg-257.htm
-https://www.bullpuparmory.com/Magpul_AFG2_Angled_Fore_Grip_p/tdg-mp-mag414.htm
-https://www.magpul.com/products/ms4-dual-qd-sling-gen2
-https://www.amazon.com/dp/B005SBNH1U
-https://www.amazon.com/Pelican-1700-Long-Case-Black/dp/B00286M5OS/
-https://www.amazon.com/Battlefield-1-PlayStation-4/dp/B01F9HMO2K/
-https://www.amazon.com/dp/B0093162RM/
-https://www.amazon.com/LIFX-Adjustable-Multicolor-Dimmable-Required/dp/B01KY02MS8/
-https://www.amazon.com/dp/B00BB2MMNE/
-
+- name: 
+  tagline: 
+  image: 
+  url: https://www.bullpuparmory.com/product_p/tg-258.htm
+  price: 
+- name:
+  tagline:
+  image:
+  url: https://www.bullpuparmory.com/product_p/tg-257.htm
+  price:
+- name:
+  tagline:
+  image:
+  url: https://www.bullpuparmory.com/Magpul_AFG2_Angled_Fore_Grip_p/tdg-mp-mag414.htm
+  price:
+- name:
+  tagline:
+  image:
+  url: https://www.magpul.com/products/ms4-dual-qd-sling-gen2
+  price:
+- name:
+  tagline:
+  image:
+  url: https://www.amazon.com/dp/B005SBNH1U
+  price:
+- name:
+  tagline:
+  image:
+  url: https://www.amazon.com/Pelican-1700-Long-Case-Black/dp/B00286M5OS/
+  price:- name:
+  tagline:
+  image:
+  url: https://www.amazon.com/Battlefield-1-PlayStation-4/dp/B01F9HMO2K/
+  price:
+- name:
+  tagline:
+  image:
+  url: https://www.amazon.com/dp/B0093162RM/
+  price:
+- name:
+  tagline:
+  image:
+  url: https://www.amazon.com/LIFX-Adjustable-Multicolor-Dimmable-Required/dp/B01KY02MS8/
+  price:
+- name:
+  tagline:
+  image:
+  url: https://www.amazon.com/dp/B00BB2MMNE/
+  price:
