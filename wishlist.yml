@@ -1,82 +1,55 @@
 ---
-- name: Up Goer Five Poster
-  tagline: Simple stuff, really
-  image: http://cdn.shopify.com/s/files/1/0149/3544/products/upgoerfive-1_0e2ceb57-c3e7-4847-8f39-406788c60060_large.png?v=1417629417
+ name: Up Goer Five Poster
   url: http://store.xkcd.com/collections/posters/products/up-goer-five-poster
   price: 15
-- name: Nest
-  tagline: Hook your house to the cloud
-  image: https://store.nest.com/assets/images/store/products/thermostat/d3/gallery/f/slide1_2x-cddf54200b0a87520c4c1b61ea4b4f8c.png
+- name: Nest Thermostat, black
   url: https://store.nest.com/product/thermostat/
   price: 250
+- name: Nest Cam
+  url: https://store.nest.com/product/security/camera
+  price: 200
 - name: Kayak King Spin Pole
-  tagline: Kayak fishing!
-  image: http://cdn2.bigcommerce.com/server2200/48575/products/38/images/179/IMG_0379__23186.1349681231.350.350.JPG
   url: http://www.emmrod.com/kayak-king-spin-pole/#
   price: 80
-- name: Cabela's Wind River Combo 865-4
-  tagline: I've heard fly fishing is at least three times cooler
-  image: http://images.cabelas.com/is/image/Cabelas/s7_322084_999_01
-  url: http://www.cabelas.com/product/fishing/rod-reel-combos/fly-fishing-rod-reel-combos%7C/pc/104793480/c/104762880/sc/105571980/cabela-s-wind-river-combo/1342342.uts?destination=%2Fcatalog%2Fbrowse.cmd%3FN%3D1104843
-  price: 120
-- name: Vibram KSO EVO shoes
-  tagline: Shoes that are basically not shoes. Size 43, black
-  image: http://us.vibram.com/dw/image/v2/AAWR_PRD/on/demandware.static/-/Sites-vbi-apparel-footwear/default/dw9d23f4ef/images/M07/black/hero.jpg
+- name: Cabela's RLS+ Fly Combo, 905
+  url: http://www.cabelas.com/catalog/product.jsp?productId=1555116
+  price: 170
+- name: Vibram KSO EVO shoes, size 43, black
   url: http://us.vibram.com/shop/fivefingers/men/training-fitness/kso-evo/M07.html
   price: 90
 - name: Samsung Seagate 2TB Laptop drive
-  tagline: More space for PS4 games
-  image: https://images-na.ssl-images-amazon.com/images/I/41G%2B6GaAMnL.jpg
   url: https://www.amazon.com/gp/product/B00I8O6OQ4/
   price: 105
-- name: 
-  tagline: 
-  image: 
+- name: Talon rubber grip wrap for X95
   url: https://www.bullpuparmory.com/product_p/tg-258.htm
-  price: 
-- name:
-  tagline:
-  image:
-  url: https://www.bullpuparmory.com/product_p/tg-257.htm
-  price:
-- name:
-  tagline:
-  image:
+  price: 20
+- name: Magpul AFG2 Angled Fore Grip, black
   url: https://www.bullpuparmory.com/Magpul_AFG2_Angled_Fore_Grip_p/tdg-mp-mag414.htm
-  price:
-- name:
-  tagline:
-  image:
+  price: 35
+- name: MS4 Dual Quick-Detach Sling, black
   url: https://www.magpul.com/products/ms4-dual-qd-sling-gen2
   price:
-- name:
-  tagline:
-  image:
-  url: https://www.amazon.com/dp/B005SBNH1U
-  price:
-- name:
-  tagline:
-  image:
+- name: Dual Clip IWB Protos-M, Sig P238, right-hand, Dri-matrix, all black
+  url: https://www.blackarchholsters.com/collections/all-products/products/protos-m
+  price: 100
+- name: Pelican 1700 Rifle Case with Foam, black 
   url: https://www.amazon.com/Pelican-1700-Long-Case-Black/dp/B00286M5OS/
-  price:- name:
-  tagline:
-  image:
+  price: 180
+- name: Battlefield 1, PS4
   url: https://www.amazon.com/Battlefield-1-PlayStation-4/dp/B01F9HMO2K/
-  price:
-- name:
-  tagline:
-  image:
+  price: 60
+- name: Philips HF3520 Wake-Up Light
   url: https://www.amazon.com/dp/B0093162RM/
-  price:
-- name:
-  tagline:
-  image:
+  price: 170
+- name: LIFX Gen3 A19 smart lightbulb
   url: https://www.amazon.com/LIFX-Adjustable-Multicolor-Dimmable-Required/dp/B01KY02MS8/
-  price:
-- name:
-  tagline:
-  image:
-  url: https://www.amazon.com/dp/B00BB2MMNE/
-  price:
-- name: http://www.bottlecutting.com/collections/all-products
-- name: http://www.maxkeyboard.com/max-falcon-8-custom-programmable-mini-macropad-mechanical-keyboard-assembled.html
+  price: 60
+- name: WeMo Switch Smart Plug
+  url: http://www.belkin.com/us/p/P-F7C027/
+  price: 40
+- name: Kinkajou Bottle Cutting Holiday Bundle 2
+  url: http://www.bottlecutting.com/products/holiday-bundle-2
+  price: 110
+- name: MAX Falcon-8 programmable keypad, black keys, Cherry MX reds, Gray plate, White LED, no o-rings
+  url: http://www.maxkeyboard.com/max-falcon-8-custom-programmable-mini-macropad-mechanical-keyboard-assembled.html
+  price: 45
