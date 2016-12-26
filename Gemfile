@@ -1,4 +1,4 @@
-ruby '2.3.3'
+ruby File.read('.circle-ruby').chomp
 source 'https://rubygems.org'
 
 gem 'jekyll', '~> 3.3.0'
