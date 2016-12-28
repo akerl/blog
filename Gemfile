@@ -7,7 +7,7 @@ gem 'kramdown', '~> 1.13.0'
 gem 'jekyll-assets', '~> 2.2.0'
 gem 'uglifier', '~> 3.0.0'
 gem 'sass', '~> 3.4.1'
-gem 'therubyracer', '~> 0.12.1'
+gem 'therubyracer', git: 'https://github.com/cowboyd/therubyracer'
 gem 'html-proofer', '~> 3.4.0'
 
 group :development do
