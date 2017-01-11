@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/cowboyd/therubyracer
-  revision: 2f1127bed45f03b91f3c92469be26399d3c1bcd8
+  revision: 466a1f0d4f696acfe971899272359623ec0a7a97
   specs:
-    therubyracer (0.12.2)
+    therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
 
@@ -26,7 +26,7 @@ GEM
     execjs (2.7.0)
     extras (0.1.0)
       forwardable-extended (~> 2.5)
-    faraday (0.10.0)
+    faraday (0.10.1)
       multipart-post (>= 1.2, < 3)
     fastimage (2.0.1)
       addressable (~> 2)
@@ -69,7 +69,7 @@ GEM
       sass (~> 3.4)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    kramdown (1.13.1)
+    kramdown (1.13.2)
     libv8 (3.16.14.17)
     liquid (3.0.6)
     listen (3.0.8)
@@ -79,7 +79,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multipart-post (2.0.0)
-    nokogiri (1.7.0)
+    nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     octokit (4.6.2)
       sawyer (~> 0.8.0, >= 0.5.3)
@@ -89,9 +89,9 @@ GEM
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     powerpack (0.1.1)
-    public_suffix (2.0.4)
+    public_suffix (2.0.5)
     rack (1.6.5)
-    rainbow (2.1.0)
+    rainbow (2.2.1)
     rake (12.0.0)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
