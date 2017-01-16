@@ -7,11 +7,11 @@ gem 'kramdown', '~> 1.13.0'
 gem 'jekyll-assets', '~> 2.2.0'
 gem 'uglifier', '~> 3.0.0'
 gem 'sass', '~> 3.4.1'
-gem 'therubyracer', git: 'https://github.com/cowboyd/therubyracer'
+gem 'therubyracer', '~> 0.12.3'
 gem 'html-proofer', '~> 3.4.0'
 
 group :development do
-  gem 'rubocop', '~> 0.46.0'
+  gem 'rubocop', '~> 0.47.0'
   gem 'rake', '~> 12.0.0'
   gem 'rspec', '~> 3.5.0'
   gem 'fuubar', '~> 2.2.0'
