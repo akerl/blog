@@ -2,7 +2,7 @@ path = File.dirname(ENV['BUNDLE_GEMFILE'] || '.')
 ruby File.read(File.join(path, '.circle-ruby')).chomp
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 3.3.0'
+gem 'jekyll', '~> 3.4.0'
 gem 'jekyll-gist', '~> 1.4.0'
 gem 'kramdown', '~> 1.13.0'
 gem 'jekyll-assets', '~> 2.2.0'
