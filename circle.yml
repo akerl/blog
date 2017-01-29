@@ -1,9 +1,9 @@
 machine:
   environment:
     BUCKET: akerl-blog
-
 dependencies:
   override:
+  - rvm-exec $i gem update --system --no-doc
   - rvm-exec $(cat .circle-ruby) bundle install
 test:
   override:
