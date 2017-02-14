@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://www.google-analytics.com https://gist.github.com data: ; connect-src 'self'; img-src 'self'; style-src 'self' https://fonts.googleapis.com https://assets-cdn.github.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com">
         <title>{{ page.title }}</title>
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600">
@@ -14,6 +16,9 @@
         <meta name="og:site_name" content="{{ site.name }}" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="{{ site.data.social.twitter }}" />
+        <meta name="twitter:creator" content="{{ site.data.social.twitter }}" />
+        <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+        <meta name="twitter:title" content="{{ page.title }}">
         {% stylesheet fontawesome/css/fontawesome %}
         {% stylesheet bijou/main %}
         {% stylesheet custom/main %}
