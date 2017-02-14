@@ -5,7 +5,7 @@ title: Reverse engineering GitHub streaks
 
 To say I'm addicted to GitHub is an understatement. But I've attempted to focus my addiction towards productive goals, and so I decided that I wanted to process GitHub streak data programmatically. To my dismay, streak data isn't exposed as part of their API, and my request that they add it was met with polite neutrality. So I set out to see how their site built the streak chart on [the user page](https://github.com/akerl).
 
-When I began this adventure, I knew enough JavaScript to shoot myself in the foot and I'd never dealt with large existing JavaScript codebases, but I nonetheless dove in to Chrome's Developer Tools to dissect how the page created that chart. I got my first win from [Jon Chen](https://github.com/fly), who identified the source of the data: a JSON array of dates and scores served at https://github.com/users/{username}/contributions_calendar_data (a URL that no longer works, which we'll get to). This gave me the raw score data, and I got to work building a module around that.
+When I began this adventure, I knew enough JavaScript to shoot myself in the foot and I'd never dealt with large existing JavaScript codebases, but I nonetheless dove in to Chrome's Developer Tools to dissect how the page created that chart. I got my first win from [Jon Chen](https://github.com/bsdlp), who identified the source of the data: a JSON array of dates and scores served at https://github.com/users/{username}/contributions_calendar_data (a URL that no longer works, which we'll get to). This gave me the raw score data, and I got to work building a module around that.
 
 <!--more-->
 
