@@ -15,7 +15,7 @@ include:
 highlighter: rouge
 excerpt_separator: "<!--more-->"
 
-gems:
+plugins:
 - jekyll-assets
 - jekyll-gist
 
