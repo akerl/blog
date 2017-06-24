@@ -4,3 +4,4 @@ coverage/
 .bundle
 _build/
 .jekyll-metadata
+.asset-cache

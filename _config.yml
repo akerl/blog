@@ -25,7 +25,6 @@ assets:
     css: true
     js: true
   digest: true
-  cache: false
   sources:
   - _assets
 
