@@ -9,6 +9,7 @@ exclude:
 - Gemfile.lock
 - Rakefile
 - spec
+- .asset-cache
 - vendor
 include:
 - .well-known
