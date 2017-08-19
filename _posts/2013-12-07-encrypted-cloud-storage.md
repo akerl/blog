@@ -53,7 +53,7 @@ I ended up not setting up any encrypted filesystems on Google Drive after discov
 
 Part of the goal was to have these directories be mounted seamlessly, under the "If it's lots of work, I won't do it" principle. To do this, I added the credentials and path information to the OSX keychain. In Keychain Access, I added a password item for each encfs filesystem, and set the name to "EncFS", the account to the source path for the filesystem, and the password to the decryption key. I then edited the newly added item and set the comment to the destination path. I wrote the following script in Ruby that reads that information from the keychain and uses it to mount the filesystems:
 
-([permalink for the below script](https://github.com/akerl/scripts/blob/master/mount_encfs))
+([permalink for the below script](https://github.com/akerl/scripts/blob/master/old/mount_encfs))
 
 {% gist akerl/8ab3461d58c7e205e45b %}
 
