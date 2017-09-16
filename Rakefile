@@ -7,13 +7,12 @@ RSpec::Core::RakeTask.new(:spec)
 
 desc 'Run Rubocop on the code'
 RuboCop::RakeTask.new(:rubocop) do |task|
-  task.patterns = ['spec/**/*.rb']
   task.fail_on_error = true
 end
 
 desc 'Build the site'
 task :build do
-  fail unless system 'jekyll build'
+  raise unless system 'jekyll build'
 end
 
 desc 'Check rendered site'
@@ -31,4 +30,4 @@ task :test do
   ).run
 end
 
-task default: [:spec, :rubocop, :build, :test]
+task default: %i[spec rubocop build test]
