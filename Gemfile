@@ -13,6 +13,7 @@ gem 'html-proofer', '~> 3.7.0'
 
 group :development do
   gem 'rubocop', '~> 0.50.0'
+  gem 'goodcop', '~> 0.0.1'
   gem 'rake', '~> 12.1.0'
   gem 'rspec', '~> 3.6.0'
   gem 'fuubar', '~> 2.2.0'

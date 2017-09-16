@@ -1,4 +1,2 @@
-Encoding:
-    Enabled: false
-Style/FrozenStringLiteralComment:
-    Enabled: false
+inherit_gem:
+  goodcop: .rubocop.yml
