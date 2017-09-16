@@ -26,9 +26,8 @@ GEM
     fuubar (2.2.0)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
-    goodcop (0.0.2)
+    goodcop (0.1.0)
       fuubar (~> 2.2.0)
-      rubocop-rspec (~> 1.7.0)
     html-proofer (3.7.2)
       activesupport (>= 4.2, < 6.0)
       addressable (~> 2.3)
@@ -114,8 +113,6 @@ GEM
       rainbow (>= 2.2.2, < 3.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-rspec (1.7.0)
-      rubocop (>= 0.42.0)
     ruby-progressbar (1.8.3)
     safe_yaml (1.0.4)
     sass (3.5.1)
@@ -147,7 +144,7 @@ PLATFORMS
 
 DEPENDENCIES
   fuubar (~> 2.2.0)
-  goodcop (~> 0.0.1)
+  goodcop (~> 0.1.0)
   html-proofer (~> 3.7.0)
   jekyll (~> 3.5.0)
   jekyll-assets (~> 2.3.0)
