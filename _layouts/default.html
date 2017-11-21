@@ -8,7 +8,7 @@
         <title>{{ page.title }}</title>
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600">
-        <link rel="stylesheet" type="text/css" href="/assets/fontawesome/css/fontawesome-files.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome-files.css">
         <meta name="og:type" content="article" />
         <meta name="og:title" content="{{ page.title }}" />
         <meta name="og:url" content="{{ site.url }}{{ page.url }}" />
@@ -19,10 +19,10 @@
         <meta name="twitter:creator" content="{{ site.data.social.twitter }}" />
         <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
         <meta name="twitter:title" content="{{ page.title }}">
-        {% stylesheet fontawesome/css/fontawesome %}
-        {% stylesheet bijou/main %}
-        {% stylesheet custom/main %}
-        {% stylesheet highlighting/main %}
+        {% asset fontawesome.css %}
+        {% asset bijou.css %}
+        {% asset custom.css %}
+        {% asset highlighting.css %}
     </head>
     <body>
         <div class="navbar fixed">
@@ -53,4 +53,4 @@
         </div>
     </body>
 </html>
-{% javascript google/analytics %}
+{% asset google_analytics.js %}

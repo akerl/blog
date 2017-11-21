@@ -16,10 +16,6 @@ include:
 highlighter: rouge
 excerpt_separator: "<!--more-->"
 
-plugins:
-- jekyll-assets
-- jekyll-gist
-
 assets:
   compress:
     css: true

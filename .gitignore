@@ -5,3 +5,4 @@ coverage/
 _build/
 .jekyll-metadata
 .asset-cache
+.jekyll-cache
