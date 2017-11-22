@@ -10,7 +10,7 @@ gem 'therubyracer', '~> 0.12.3'
 gem 'uglifier', '~> 3.2.0'
 
 group :jekyll_plugins do
-  gem 'jekyll-assets', '~> 3.0.0'
+  gem 'jekyll-assets', '~> 3.0.1'
   gem 'jekyll-gist', '~> 1.4.0'
 end
 
