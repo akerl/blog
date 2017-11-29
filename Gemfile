@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'html-proofer', '~> 3.7.0'
 gem 'jekyll', '~> 3.6.0'
-gem 'kramdown', '~> 1.15.0'
+gem 'kramdown', '~> 1.16.0'
 gem 'sass', '~> 3.5.0'
 gem 'therubyracer', '~> 0.12.3'
 gem 'uglifier', '~> 3.2.0'
