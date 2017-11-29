@@ -1,11 +1,11 @@
----
+o---
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ site.name | xml_escape }}</title>
     <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>      
     <link href="{{ site.url }}" />
-    <link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ site.url }}/atom.xml" rel="self" type="application/ato+xml" />
     {% for post in site.posts limit:10 %}
         <item>
             <title>{{ post.title | xml_escape }}</title>
