@@ -11,7 +11,7 @@ gem 'uglifier', '~> 4.0.1'
 
 group :jekyll_plugins do
   gem 'jekyll-assets', '~> 3.0.1'
-  gem 'jekyll-gist', '~> 1.4.0'
+  gem 'jekyll-gist', '~> 1.5.0'
 end
 
 group :development do
