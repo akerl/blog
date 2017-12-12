@@ -26,7 +26,7 @@ GEM
     fuubar (2.2.0)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
-    goodcop (0.1.0)
+    goodcop (0.1.1)
       fuubar (~> 2.2.0)
     html-proofer (3.7.5)
       activesupport (>= 4.2, < 6.0)
@@ -154,7 +154,7 @@ PLATFORMS
 
 DEPENDENCIES
   fuubar (~> 2.2.0)
-  goodcop (~> 0.1.0)
+  goodcop (~> 0.1.1)
   html-proofer (~> 3.7.0)
   jekyll (~> 3.6.0)
   jekyll-assets (~> 3.0.1)
