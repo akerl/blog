@@ -19,5 +19,5 @@ group :development do
   gem 'goodcop', '~> 0.1.0'
   gem 'rake', '~> 12.3.0'
   gem 'rspec', '~> 3.7.0'
-  gem 'rubocop', '~> 0.51.0'
+  gem 'rubocop', '~> 0.52.0'
 end
