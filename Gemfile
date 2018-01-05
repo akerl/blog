@@ -2,7 +2,7 @@ path = File.dirname(ENV['BUNDLE_GEMFILE'] || '.')
 ruby File.read(File.join(path, '.circle-ruby')).chomp
 source 'https://rubygems.org'
 
-gem 'html-proofer', '~> 3.7.0'
+gem 'html-proofer', '~> 3.8.0'
 gem 'jekyll', '~> 3.7.0'
 gem 'kramdown', '~> 1.16.0'
 gem 'sass', '~> 3.5.0'
