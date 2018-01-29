@@ -12,7 +12,7 @@ It's also dawned on me that, complex though tax code may be, I have a computer a
 Where I Was
 ===========
 
-Previously, I mostly only looked *forward* financially. I did this primarily with [this ruby script](https://github.com/akerl/scripts/blob/master/budget), whose strategy was simple: model all my monthly bills as YAML, and then roll forward into the future and model the impact. An example YAML file:
+Previously, I mostly only looked *forward* financially. I did this primarily with [this ruby script](https://github.com/akerl/scripts/blob/master/old/budget), whose strategy was simple: model all my monthly bills as YAML, and then roll forward into the future and model the impact. An example YAML file:
 
 {% gist akerl/1204df254270d4e76a65965f926f7223 %}
 
