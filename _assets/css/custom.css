@@ -65,9 +65,13 @@ body {
 }
 
 .post p code {
-    background-color: #ffffff;
+    background-color: #5f90b0;
     padding: 0 5px;
-    font-style: italic;
+    margin: 0 2px;
+    color: white;
+    border-radius: 3px;
+    font-size: .95em;
+    white-space: nowrap;
 }
 
 .post h1,.post h2,.post h3 {
@@ -130,4 +134,8 @@ body {
     display: block;
     font-size: .75em;
     text-align: center;
+}
+
+.gist {
+    margin: 10px 0;
 }
