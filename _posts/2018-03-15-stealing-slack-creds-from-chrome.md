@@ -27,9 +27,7 @@ On a whim, I tried a more blunt approach: I opened one of the log files in `less
 
 I decided I didn't really care for elegant parsing, I just needed to pull the raw tokens out. The token is stored in LocalStorage along with info on the slack subdomain (and thus Slack team) that it's for, but I didn't even need that, since once I had the token extracted, I could use it to ask the Slack API what team it was for.
 
-I opened up my Ruby REPL and found a quick oneliner with a regex pattern to find Slack tokens: `File.read(db).force_encoding('ASCII-8BIT').scan(/xoxs-\d+-\d+-\d+-\h+/)`
-
-Forcing the encoding let Ruby discard the non-text data and run my regex pattern across the rest.
+I opened up my Ruby REPL and wrote a quick one-liner with a regex pattern to find Slack tokens. Forcing the encoding let Ruby discard the non-text data and run my regex pattern across the rest: `File.read(db).force_encoding('ASCII-8BIT').scan(/xoxs-\d+-\d+-\d+-\h+/)`
 
 Cleaning it all up
 =========
