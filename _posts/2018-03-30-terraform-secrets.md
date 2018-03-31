@@ -36,16 +36,7 @@ Using my new provider
 
 Now that I've got my provider, using it in Terraform is straightforward:
 
-```
-provider "awscreds" {
-  region = "us-east-1"
-}
-
-resource "awscreds_iam_access_key" "admin" {
-  user       = "admin_user"
-  file       = "creds/admin_user"
-}
-```
+{% gist akerl/197f0f85d6bbfa329c64490b89dcb4d1 %}
 
 This drops my new secret key into the `creds/admin_user` file. Success!
 
