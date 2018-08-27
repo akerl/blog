@@ -1,7 +1,6 @@
 blog
 =========
 
-[![Dependency Status](https://img.shields.io/gemnasium/akerl/blog.svg?style=flat)](https://gemnasium.com/akerl/blog)
 [![Build Status](https://img.shields.io/circleci/project/akerl/blog/master.svg)](https://circleci.com/gh/akerl/blog)
 [![CC-SA Licensed](http://img.shields.io/badge/license-CC--BY--SA-green.svg?style=flat)](http://creativecommons.org/licenses/by-sa/4.0/)
 
