@@ -18,7 +18,7 @@ My build process has gone through several iterations, but from the start I had a
 * I wanted to use containers but not *require* containers: the build process should allow building outside of containers
 * It should take care of all the dependencies for me
 
-While I was brainstorming, [Jon Chen](https://github.com/fly) suggested that I use GitHub's [Releases](https://github.com/blog/1547-release-your-software). It turned out to be a great idea, but I wanted a clean way to push up assets from the command line. Thankfully, I'd already written [octoauth](https://github.com/akerl/octoauth), a simple wrapper for handling GitHub API tokens. I set to work on a new project, called [targit](https://github.com/akerl/targit), to take care of assets for me. With it, uploading assets is as simple as `targit USER/REPO TAG /path/to/file`.
+While I was brainstorming, [Jon Chen](https://github.com/fly) suggested that I use GitHub's [Releases](https://github.blog/2013-07-02-release-your-software/). It turned out to be a great idea, but I wanted a clean way to push up assets from the command line. Thankfully, I'd already written [octoauth](https://github.com/akerl/octoauth), a simple wrapper for handling GitHub API tokens. I set to work on a new project, called [targit](https://github.com/akerl/targit), to take care of assets for me. With it, uploading assets is as simple as `targit USER/REPO TAG /path/to/file`.
 
 The build process is kicked off via a Makefile:
 
