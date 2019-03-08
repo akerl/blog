@@ -10,7 +10,6 @@ install:
 - for i in $(cat .circle-ruby) ; do rvm install $i || exit 1 ; done
 - for i in $(cat .circle-ruby) ; do rvm-exec $i bundle install || exit 1 ; done
 script:
-- curl -vI https://github.blog
 - for i in $(cat .circle-ruby) ; do rvm-exec $i bundle exec rake || exit 1 ; done
 deploy:
   provider: script
