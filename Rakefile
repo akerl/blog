@@ -30,5 +30,5 @@ task :test do
   ).run
 end
 
-#task default: %i[spec rubocop build test]
+# task default: %i[spec rubocop build test]
 task default: %i[spec rubocop build]
