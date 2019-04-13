@@ -14,7 +14,7 @@ end
 
 group :development do
   gem 'fuubar', '~> 2.3.0'
-  gem 'goodcop', '~> 0.6.0'
+  gem 'goodcop', '~> 0.7.0'
   gem 'rake', '~> 12.3.0'
   gem 'rspec', '~> 3.8.0'
   gem 'rubocop', '~> 0.67.2'
