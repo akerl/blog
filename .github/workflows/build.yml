@@ -1,0 +1,44 @@
+name: Build
+on: [pull_request, push]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: akerl/action-checkout@v2.0.0
+    - name: Install AWS CLI
+      run: pip install --user awscli
+    - name: Install Ruby
+      uses: akerl/setup-ruby@v1
+      with:
+        ruby-version: '2.7.1'
+    - name: Install deps
+      run: bundle install
+    - name: Rake
+      run: bundle exec rake
+    - name: Release
+      if: github.ref == 'refs/heads/master'
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: us-east-1
+      run: aws s3 sync --delete _build/ s3://akerl-blog/
+    - name: Notify on success
+      if: success()
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      uses: akerl/github-action-slack-notify-build@v1.1.1
+      with:
+        channel_id: ${{ secrets.SLACK_BOT_CHANNEL }}
+        status: success
+        color: good
+    - name: Notify on failure
+      if: failure()
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      uses: akerl/github-action-slack-notify-build@v1.1.1
+      with:
+        channel_id: ${{ secrets.SLACK_BOT_CHANNEL }}
+        status: failed
+        color: danger
