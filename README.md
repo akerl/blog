@@ -1,7 +1,6 @@
 blog
 =========
 
-[![Build Status](https://img.shields.io/travis/com/akerl/blog.svg)](https://travis-ci.com/akerl/blog)
 [![CC-SA Licensed](http://img.shields.io/badge/license-CC--BY--SA-green.svg?style=flat)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 My personal blog. Generation of the site is done using [Jekyll](http://jekyllrb.com/).
