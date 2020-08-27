@@ -13,4 +13,5 @@ end
 
 group :development do
   gem 'goodcop', '~> 0.9.0'
+  gem 'rake', '~> 13.0.1'
 end
