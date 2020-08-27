@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 gem 'html-proofer', '~> 3.15.3'
 gem 'jekyll', '~> 3.9.0'
+gem 'kramdown-parser-gfm', '~> 1.1.0'
 gem 'sprockets', '~> 3.7'
 gem 'therubyracer', '~> 0.12.3'
 gem 'uglifier', '~> 4.2.0'
