@@ -65,7 +65,7 @@ Setting up the service and config on the Pi was pretty straightforward:
 
 Launching that gave me the graphs I was looking for!
 
-![Graphs](/images/tea-storage-graphs.png)
+![Graphs](/images/tea-storage-graphs.png){: width="512px" style="display:block; margin-left:auto; margin-right:auto;"}
 
 Step N: more stuff?
 ===================
