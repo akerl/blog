@@ -65,7 +65,7 @@ Setting up the service and config on the Pi was pretty straightforward:
 
 Launching that gave me the graphs I was looking for!
 
-![Graphs](/images/tea-storage-graphs.svg)
+![Graphs](/images/tea-storage-graphs.png)
 
 Step N: more stuff?
 ===================
