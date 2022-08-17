@@ -1,0 +1,38 @@
+baseURL: https://blog.akerl.org
+languageCode: en-us
+title: akerl's blogthing
+
+theme: "anubis"
+paginate: 10
+googleAnalytics: "G-9DKD9HJ8JG"
+enableRobotsTXT: true
+
+menu:
+  footer:
+  - identifier: sitesource
+    name: Site Source
+    title: Site Source
+    url: https://github.com/akerl/blog
+    weight: 0
+
+params:
+  author: Les Aker
+  email: me@lesaker.org
+  dateFormat: 2006-01-02
+  paginationSinglePost: true
+  style: light-without-switcher
+  readMore: false
+  disableSummary: false
+  rssAsSocialIcon: true
+  social:
+  - id: github
+    name: akerl
+  - id: twitter
+    name: akerl
+  - id: email
+    name: me@lesaker.org
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
