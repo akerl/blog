@@ -7,6 +7,8 @@ jobs:
     steps:
     - name: Checkout
       uses: akerl/action-checkout@v2.0.0
+    - name: Submodules
+      run: git submodule update --init --recursive
     - name: Install AWS CLI
       run: pip install --user awscli
     - name: Install Hugo
