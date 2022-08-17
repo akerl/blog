@@ -2,9 +2,9 @@ baseURL: https://blog.akerl.org
 languageCode: en-us
 title: akerl's blogthing
 
-theme: "anubis"
+theme: anubis
 paginate: 10
-googleAnalytics: "G-9DKD9HJ8JG"
+googleAnalytics: G-ZCTZL08MY8
 enableRobotsTXT: true
 
 menu:
