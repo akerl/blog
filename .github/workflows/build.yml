@@ -9,21 +9,21 @@ jobs:
       uses: akerl/action-checkout@v2.0.0
     - name: Install AWS CLI
       run: pip install --user awscli
-    - name: Install Ruby
-      uses: akerl/setup-ruby@v1
-      with:
-        ruby-version: '2.7.1'
-    - name: Install deps
-      run: bundle install
-    - name: Rake
-      run: bundle exec rake
+    - name: Install Hugo
+      env:
+        HUGO_VERSION: 0.101.0
+      run: |
+        curl -sLo ~/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz"
+        tar -xvzf ~/hugo.tar.gz -C ~/ hugo
+      - name: Build Blog
+        run: ~/hugo
     - name: Release
       if: github.ref == 'refs/heads/master'
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: us-east-1
-      run: aws s3 sync --delete _build/ s3://akerl-blog/
+      run: aws s3 sync --delete public/ s3://akerl-blog/
     - name: Notify on success
       if: success()
       env:
