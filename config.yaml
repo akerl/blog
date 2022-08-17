@@ -32,6 +32,9 @@ params:
   - id: email
     name: me@lesaker.org
 
+minify:
+  minifyOutput: true
+
 markup:
   goldmark:
     renderer:
