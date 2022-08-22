@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: akerl/action-checkout@v2.0.0
-    - name: Submodules
-      run: git submodule update --init --recursive
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
     - name: Install AWS CLI
       run: pip install --user awscli
     - name: Install Hugo
