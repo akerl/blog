@@ -1,6 +1,7 @@
 blog
 =========
 
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/akerl/blog/Build)](https://github.com/akerl/blog/actions)
 [![CC-SA Licensed](http://img.shields.io/badge/license-CC--BY--SA-green.svg?style=flat)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 My personal blog. Generation of the site is done using [Hugo](https://gohugo.io/).
