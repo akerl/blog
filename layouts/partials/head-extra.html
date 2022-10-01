@@ -1,0 +1,7 @@
+{{ if and (.Site.GoatCounter) (hugo.IsProduction) }}
+<script data-goatcounter="https://{{.Site.GoatCounter}}/count"
+        async src="//{{.Site.GoatCounter}}/count.js"></script>
+<noscript>
+    <img src="https://{{.Site.GoatCounter}}/count?p=/test-noscript">
+</noscript>
+{{ end }}
