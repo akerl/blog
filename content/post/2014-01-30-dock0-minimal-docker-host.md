@@ -1,6 +1,8 @@
 ---
 date: "2014-01-30T00:00:00Z"
 title: 'dock0: A minimal Docker host'
+aliases:
+- post/2014-01-30-dock0-minimal-docker-host
 ---
 Linux containers have recently been in the spotlight, in no small part due to [Docker's](https://www.docker.com) work in providing a user-friendly interface to [LXC](https://linuxcontainers.org/). Lightweight containers allow us to reimagine how we handle deployments, separation of services, and infrastructure management. A system that can be spun up in seconds, configured on the fly, and spun down just as fast presents the next step in a trend begun by the virtual private server.
 

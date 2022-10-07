@@ -1,6 +1,8 @@
 ---
 date: "2014-12-18T00:00:00Z"
 title: 's6: Simple init system'
+aliases:
+- post/2014-12-18-s6-simple-init-system
 ---
 
 One of the natural consequences of using [lightweight Docker hosts](/2014/12/17/dock0-round-2) and running everything in containers is that I tend not to interact with the actual VM's system as much. I SSH straight to a container for IRC, I do my kernel builds in containers, etc. With this, it's made sense to strip out components out of the VM that were used solely for user interaction.

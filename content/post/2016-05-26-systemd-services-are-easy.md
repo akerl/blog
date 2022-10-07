@@ -1,6 +1,8 @@
 ---
 date: "2016-05-26T00:00:00Z"
 title: systemd Services Are Easy
+aliases:
+- post/2016-05-26-systemd-services-are-easy
 ---
 
 I spend a decent amount of time thinking about init systems. Most of the time, that means [s6](http://skarnet.org/software/s6/), but for more complex or user-interactive systems, I'd go for systemd. This puts me squarely opposed with a decent-sized group of loud people, it seems. One of the complaints that is occasionally brought up is that sysvinit was great and init scripts are great, etc etc. My hypothesis: for people whose primary init system interaction is writing and using initscripts, systemd unit files are so amazingly easier to read and write and use that it is without a doubt the better choice.

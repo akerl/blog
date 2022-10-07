@@ -6,6 +6,9 @@ theme: anubis
 paginate: 10
 enableRobotsTXT: true
 
+permalinks:
+  post: /:year/:month/:day/:title
+
 menu:
   footer:
   - identifier: sitesource
