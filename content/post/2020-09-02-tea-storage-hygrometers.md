@@ -2,7 +2,7 @@
 date: "2020-09-02T00:00:00Z"
 title: 'Tea storage: hygrometer data'
 aliases:
-- post/2020-09-02-tea-storage-hygrometers
+- /post/2020-09-02-tea-storage-hygrometers
 ---
 
 Following on from my last post, I've been working to track and control the conditions in my tea storage boxes. Initially, I got some cheap units from Amazon. They were basically a humidity/temperature sensor, an LCD display, and a battery. But since I don't just sit in the basement staring at my tea shelf, I wanted to upgrade to a solution that let me transmit that data to view it more easily.

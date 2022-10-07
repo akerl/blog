@@ -2,7 +2,7 @@
 date: "2018-03-30T00:00:00Z"
 title: Avoiding AWS secrets in Terraform statefiles
 aliases:
-- post/2018-03-30-terraform-secrets
+- /post/2018-03-30-terraform-secrets
 ---
 
 I've been using [Terraform](https://terraform.io) for managing my AWS account for a while. It's pretty snazzy, but there are still a couple of things that Terraform doesn't fully handle. For example, making an [IAM access key](https://www.terraform.io/docs/providers/aws/r/iam_access_key.html) in Terraform stores the secret key in the statefile. They've added support to store the secret key encrypted with a GPG key, but I'd much prefer to not have it end up in the statefile at all.

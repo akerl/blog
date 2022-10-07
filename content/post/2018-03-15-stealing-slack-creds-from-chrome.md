@@ -2,7 +2,7 @@
 date: "2018-03-15T00:00:00Z"
 title: Stealing Slack Creds from Chrome
 aliases:
-- post/2018-03-15-stealing-slack-creds-from-chrome
+- /post/2018-03-15-stealing-slack-creds-from-chrome
 ---
 
 A while back, I wanted to do a couple quick things w/ the Slack API. The script I was writing would only end up being run a handful of times, all from my local computer, and I hate having multiple distinct credentials stored in the same place with the same perms, so I hatched a plan: piggyback on the existing creds my browser was using to access Slack.
