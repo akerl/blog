@@ -1,6 +1,7 @@
 ---
 date: "2017-12-28T00:00:00Z"
 title: Custom Arch Repo the Automated Way
+description: Automating a package repository for custom Archlinux images
 aliases:
 - /post/2017-12-28-custom-arch-repo-the-automated-way
 ---

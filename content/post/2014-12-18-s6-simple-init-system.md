@@ -1,6 +1,7 @@
 ---
 date: "2014-12-18T00:00:00Z"
 title: 's6: Simple init system'
+description: Using s6 for simple, reliable init on Linux
 aliases:
 - /post/2014-12-18-s6-simple-init-system
 ---

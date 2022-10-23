@@ -1,6 +1,7 @@
 ---
 date: "2016-05-26T00:00:00Z"
 title: systemd Services Are Easy
+description: Writing systemd unit files is smooth and easy
 aliases:
 - /post/2016-05-26-systemd-services-are-easy
 ---

@@ -1,6 +1,7 @@
 ---
 date: "2014-12-20T00:00:00Z"
 title: Building software with containers
+description: Automating softawre packaging using containers and a lightweight DSL
 aliases:
 - /post/2014-12-20-building-software-with-containers
 ---

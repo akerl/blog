@@ -1,6 +1,7 @@
 ---
 date: "2014-12-19T00:00:00Z"
 title: Reverse engineering GitHub streaks
+description: Unwinding GitHub Javascript to render pixel-perfect contribution charts
 aliases:
 - /post/2014-12-19-reverse-engineering-github-streaks
 ---

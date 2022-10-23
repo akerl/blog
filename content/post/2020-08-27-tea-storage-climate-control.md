@@ -1,6 +1,7 @@
 ---
 date: "2020-08-27T00:00:00Z"
 title: 'Tea storage: climate control'
+description: Building climate-controlled storage for fermented tea
 aliases:
 - /post/2020-08-27-tea-storage-climate-control
 ---

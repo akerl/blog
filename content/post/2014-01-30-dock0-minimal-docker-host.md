@@ -1,6 +1,7 @@
 ---
 date: "2014-01-30T00:00:00Z"
 title: 'dock0: A minimal Docker host'
+description: Building minimal VM images for hosting Docker containers
 aliases:
 - /post/2014-01-30-dock0-minimal-docker-host
 ---

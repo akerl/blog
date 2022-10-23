@@ -1,6 +1,7 @@
 ---
 date: "2016-04-27T00:00:00Z"
 title: 'Code and Taxes: Totally Exciting'
+description: Using ledger and simple scripts to automate double entry accounting
 aliases:
 - /post/2016-04-27-code-and-taxes-totally-exciting
 ---

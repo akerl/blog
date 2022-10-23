@@ -1,6 +1,7 @@
 ---
 date: "2020-09-02T00:00:00Z"
 title: 'Tea storage: hygrometer data'
+description: Visualizing metrics for tea storage conditions
 aliases:
 - /post/2020-09-02-tea-storage-hygrometers
 ---

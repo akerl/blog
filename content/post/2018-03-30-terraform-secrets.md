@@ -1,6 +1,7 @@
 ---
 date: "2018-03-30T00:00:00Z"
 title: Avoiding AWS secrets in Terraform statefiles
+description: Custom terraform provider to allow secure generation of IAM keypairs
 aliases:
 - /post/2018-03-30-terraform-secrets
 ---

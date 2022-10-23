@@ -1,6 +1,7 @@
 ---
 date: "2018-03-15T00:00:00Z"
 title: Stealing Slack Creds from Chrome
+description: Using Chrome cookies to extract Slack API credentials
 aliases:
 - /post/2018-03-15-stealing-slack-creds-from-chrome
 ---

@@ -2,6 +2,7 @@
 date: "2013-12-07T00:00:00Z"
 image: encrypted-cloud-storage
 title: Encrypted cloud storage
+description: Encrypting cloud storage using EncFS
 aliases:
 - /post/2013-12-07-encrypted-cloud-storage
 ---
