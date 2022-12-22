@@ -29,8 +29,8 @@ params:
   social:
   - id: github
     name: akerl
-  - id: twitter
-    name: akerl
+  - id: instagram
+    name: akerles
   - id: email
     name: me@lesaker.org
   goatCounter: goat.akerl.org
