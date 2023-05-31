@@ -33,7 +33,7 @@ params:
     name: akerles
   - id: email
     name: me@lesaker.org
-  goatCounter: goat.akerl.org
+  goatCounter: goat.akerl.app
 
 minify:
   minifyOutput: true
