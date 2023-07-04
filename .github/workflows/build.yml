@@ -27,7 +27,8 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: us-east-1
-      run: aws s3 sync --delete public/ s3://akerl-blog/    - name: Post to hook-exporter
+      run: aws s3 sync --delete public/ s3://akerl-blog/
+    - name: Post to hook-exporter
       run: ./.github/exporter.sh
       env:
         EXPORTER_TOKEN: ${{ secrets.EXPORTER_TOKEN }}
