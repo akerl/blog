@@ -38,4 +38,4 @@ jobs:
       env:
         EXPORTER_TOKEN: "${{ secrets.EXPORTER_TOKEN }}"
         JOB_STATUS: "${{ job.status }}"
-      if: "${{ always() }}"
+      if: always() && github.ref == 'refs/heads/main'
