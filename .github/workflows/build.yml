@@ -20,12 +20,12 @@ jobs:
       run: pip install --user awscli
     - name: Install Hugo
       env:
-        HUGO_VERSION: 0.101.0
+        HUGO_VERSION: 0.125.6
       run: |
-        curl -sLo ~/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz"
+        curl -sLo ~/hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz"
         tar -xvzf ~/hugo.tar.gz -C ~/ hugo
     - name: Build Blog
-      run: "~/hugo --panicOnWarning"
+      run: "~/hugo --panicOnWarning --cleanDestinationDir"
     - name: Release
       if: github.ref == 'refs/heads/main'
       env:
