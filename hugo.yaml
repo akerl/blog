@@ -1,0 +1,38 @@
+baseURL: https://blog.akerl.org
+languageCode: en-us
+title: akerl's blogthing
+
+theme: papermod
+paginate: 10
+
+permalinks:
+  post: /:year/:month/:day/:title
+
+menu:
+  main:
+  - name: tags
+    url: /tags/
+    weight: 1
+  - name: source
+    url: https://github.com/akerl/blog
+    weight: 2
+  - name: github
+    url: https://github.com/akerl
+    weight: 3
+  - name: instagram
+    url: https://www.instagram.com/akerles
+    weight: 4
+  - name: email
+    url: mailto:me@lesaker.org
+    weight: 5
+  - name: rss
+    url: /index.xml
+    weight: 6
+
+params:
+  env: production
+  author: Les Aker
+  email: me@lesaker.org
+  dateFormat: 2006-01-02
+  goatCounter: goat.akerl.app
+  disableSpecial1stPost: true

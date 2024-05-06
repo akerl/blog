@@ -4,6 +4,9 @@ title: 'Code and Taxes: Totally Exciting'
 description: Using ledger and simple scripts to automate double entry accounting
 aliases:
 - /post/2016-04-27-code-and-taxes-totally-exciting
+tags:
+- code
+- finances
 ---
 
 Now that tax day has officially passed, it occurred to me that the best way to celebrate would be to plan for next year. A few of my friends semi-seriously keep tabs on a lightweight challenge: try to break as close to zero on tax day. I don't know how much actual effort most of them put into this challenge, but I'd average it's low, because I've not historically put effort into it. But the goal is fairly sound: don't give Uncle Sam an interest free loan of your hard-earned cash.

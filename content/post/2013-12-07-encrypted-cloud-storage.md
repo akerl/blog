@@ -5,6 +5,8 @@ title: Encrypted cloud storage
 description: Encrypting cloud storage using EncFS
 aliases:
 - /post/2013-12-07-encrypted-cloud-storage
+tags:
+- code
 ---
 It's pretty clear these days that {thing}-as-a-service is a powerful concept. That said, it involves a certain level of trust in whoever is providing the service. Part of that is the trust that they'll keep providing you the service, but on the tin-foil-hat side, you trust that they won't use the information you give them to your detriment. This is especially true for storage/hosting service providers, where you're quite literally handing your data to a 3rd party.
 

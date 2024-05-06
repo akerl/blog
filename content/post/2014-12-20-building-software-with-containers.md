@@ -4,6 +4,8 @@ title: Building software with containers
 description: Automating softawre packaging using containers and a lightweight DSL
 aliases:
 - /post/2014-12-20-building-software-with-containers
+tags:
+- code
 ---
 
 It seems like every day a new project is released for managing datacenters full of containers, all networked together and serving content to users. I enjoy that aspect of containers as much as the next sysadmin, but I've found one of the coolest use cases for them to be repeatable/isolated software builds.

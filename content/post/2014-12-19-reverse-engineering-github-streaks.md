@@ -4,6 +4,8 @@ title: Reverse engineering GitHub streaks
 description: Unwinding GitHub Javascript to render pixel-perfect contribution charts
 aliases:
 - /post/2014-12-19-reverse-engineering-github-streaks
+tags:
+- code
 ---
 
 To say I'm addicted to GitHub is an understatement. But I've attempted to focus my addiction towards productive goals, and so I decided that I wanted to process GitHub streak data programmatically. To my dismay, streak data isn't exposed as part of their API, and my request that they add it was met with polite neutrality. So I set out to see how their site built the streak chart on [the user page](https://github.com/akerl).

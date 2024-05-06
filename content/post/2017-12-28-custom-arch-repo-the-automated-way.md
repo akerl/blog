@@ -4,6 +4,8 @@ title: Custom Arch Repo the Automated Way
 description: Automating a package repository for custom Archlinux images
 aliases:
 - /post/2017-12-28-custom-arch-repo-the-automated-way
+tags:
+- code
 ---
 
 At some point while working [VM images](/2014/12/17/dock0-round-2/) and [containers](/2014/12/20/building-software-with-containers/), I ended up wanting some custom Arch packages. It started with a desire for lighter packages and to really understand what was going into my system, and then turned into something of an obsession. As of today, I publish 92 Archlinux packages, most of them custom builds of common Linux tools. And because otherwise I'd be drowning in manual work, I've automated the hell out of the process.

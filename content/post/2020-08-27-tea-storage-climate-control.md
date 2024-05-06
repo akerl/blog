@@ -4,6 +4,8 @@ title: 'Tea storage: climate control'
 description: Building climate-controlled storage for fermented tea
 aliases:
 - /post/2020-08-27-tea-storage-climate-control
+tags:
+- tea
 ---
 
 I've recently been getting into collecting and drinking tea. A good friend introduced me to [puer tea](https://en.m.wikipedia.org/wiki/Pu%27er_tea), which is noteworthy in that it's designed to improve with age. That aging process, similar to wine, relies on proper storage characteristics. Puer originates in the Yunnan Province of China, and thus the expected aging conditions align roughly with the conditions available there: warmer temperatures and higher humidity, especially compared to my basement where my tea shelf sits.
