@@ -3,7 +3,10 @@ languageCode: en-us
 title: akerl's blogthing
 
 theme: papermod
-paginate: 10
+
+pagination:
+  disableAliases: false
+  pagerSize: 2
 
 permalinks:
   post: /:year/:month/:day/:title
