@@ -22,7 +22,21 @@ I led my investigation with the understanding that when I authenticated to Slack
 
 I also had another bit of information: I knew that Slack tokens (at least the ones I'd run into before) had a static prefix of "xoxs-". My first grep looked promising:
 
-{{< gist akerl 873601c42cad0868c23dc15817985b9b >}}
+```
+~/Library/Application Support/Google/Chrome
+❯ grep -R xoxs- *
+grep: App Shim Socket: Operation not supported on socket
+Binary file Default/Local Storage/leveldb/001633.ldb matches
+Binary file Default/Local Storage/leveldb/001635.ldb matches
+Binary file Default/Local Storage/leveldb/001634.log matches
+Binary file Default/Local Storage/leveldb/MANIFEST-000001 matches
+Binary file Default/Local Storage/leveldb/001628.ldb matches
+Binary file Default/Local Storage/leveldb/001629.ldb matches
+grep: RunningChromeVersion: No such file or directory
+grep: SingletonCookie: No such file or directory
+grep: SingletonLock: No such file or directory
+grep: SingletonSocket: Operation not supported on socket
+```
 
 Reading LocalStorage
 ====================
@@ -42,5 +56,18 @@ So now I knew how to get the tokens out. My next step was to make a quick module
 
 The library provides a super simple `Limp.tokens` method that returns an array of Slack tokens it's found. There's also a `limp` command which returns the tokens on the command line:
 
-{{< gist akerl 8149c93b585665b549be6addcbd456ae >}}
+```
+❯ cat test.rb
+require 'limp'
+puts Limp.tokens
 
+❯ ruby test.rb
+xoxs-7<REDACTED>
+xoxs-8<REDACTED>
+xoxs-2<REDACTED>
+
+❯ limp
+xoxs-7<REDACTED>
+xoxs-8<REDACTED>
+xoxs-2<REDACTED>
+```

@@ -16,43 +16,45 @@ I love Dropbox, but I'm not sure I'm ready to trust them with my secret plans fo
 
 The first step was to set up these services to sync to a standardized location. I picked these 3 partially because all of them support auser-configurable sync location. For simplicity, I created ~/.cloud and set each provider to sync to ~/.cloud/{provider_name}, so I ended up with the following structure:
 
-{{< highlight shell >}}
+```
 /Users/akerl/.cloud
 ├── Copy
 ├── Dropbox
 └── Google
-{{< / highlight >}}
+```
 
 There was some content that I didn't plan on encrypting, so I set up symlinks linking those locations to where I wanted them in the filesystem:
 
-{{< highlight shell >}}
+```sh
 # For convenient access and stuff that sync via Dropbox
 ln -s ~/.cloud/Dropbox ~/Dropbox
 # I'm not terribly concerned about encrypting my collection of ebooks
 ln -s ~/.cloud/Google/Books ~/Books
-{{< / highlight >}}
+```
 
 I then looked at a couple encryption methods, and settled on [EncFS](https://en.wikipedia.org/wiki/EncFS). It has the benefit of operating at the file level and thus playing nice with the continuous syncing done by these providers, as well as working with FUSE to allow easy mounting on OSX or Linux. I'm only using the encrypted stores on my Macs right now, but the ability to easily expand is nice.
 
 EncFS is packaged in [Homebrew](https://github.com/Homebrew/brew), but the package depends on the [OSXFUSE](https://osxfuse.github.io/) packaged in Homebrew, which requires full XCode to install. I already had OSXFUSE installed via their package, and I wasn't particularly keen on installing XCode just to install OSXFUSE a second time. Thankfully, Homebrew makes it pretty easy to modify install "formulas", so I adjusted the EncFS formula to skip the OSXFUSE dependency and use the pre-existing libs. I threw that in a gist, and installing it was just a matter of pointing brew at it:
 
-{{< gist akerl 76fb0ff5716a49f08e9b >}}
+```sh
+brew install https://gist.github.com/akerl/7571256/raw/5799e52b8e69cd1e63f89426412678d5cb56f76d/encfs.rb
+```
 
 There was also an issue with the boost libraries being in the wrong spot, since I'm a rebel and don't put brew in /usr/local. I fixed that with the following one-liner:
 
-{{< highlight shell >}}
+```sh
 for x in /usr/local/brew/lib/libboost_*.dylib; do
   sudo ln -s $x /usr/local/lib
 done
-{{< / highlight >}}
+```
 
 I then picked out the mount points I wanted and made the EncFS filesystems to put there. Setting up EncFS is pretty simple; you run the encfs command with a source and destination, and if they aren't set up, it walks you through setting them up. If they are, it prompts you for the key and mounts that filesystem. I ended up creating 3 mount points:
 
-{{< highlight shell >}}
+```sh
 encfs ~/.cloud/Dropbox/scratch.encfs ~/scratch
 encfs ~/.cloud/Dropbox/tmp.encfs ~/tmp
 encfs ~/.cloud/Copy/vault.encfs ~/vault
-{{< / highlight >}}
+```
 
 I ended up not setting up any encrypted filesystems on Google Drive after discovering an odd bug: their client blocks files from being "deleted" when they are deleted, so an EncFS mounted from Google Drive fails when trying to delete directories, claiming the aren't empty. It didn't look like something easily resolvable, and I had plenty of space from Dropbox and Copy to work with, so I resigned myself to using Google Drive for large but not sensitive files.
 
@@ -60,11 +62,40 @@ Part of the goal was to have these directories be mounted seamlessly, under the 
 
 ([permalink for the below script](https://github.com/akerl/scripts/blob/master/old/mount_encfs))
 
-{{< gist akerl 8ab3461d58c7e205e45b >}}
+```ruby
+#!/usr/bin/env ruby
+
+require 'keychain'
+require 'pathname'
+
+encfs = ARGV.first || '/usr/local/brew/bin/encfs'
+
+Keychain.generic_passwords.where(service: 'EncFS').all.each do |item|
+  source = File.expand_path(item.account)
+  dest = File.expand_path(item.comment)
+
+  fail 'Paths are incorrect' unless Dir.exist? source and Dir.exist? dest
+  next if Pathname.new(dest).mountpoint?
+
+  mount = IO.popen "#{encfs} -S '#{source}' '#{dest}'", 'w'
+  mount.puts item.password
+  mount.close
+end
+```
 
 Having run that manually and confirmed it worked by checking `df -h`, I set out to have the filesystems mounted automatically at boot. The easiest way to do to this on a Mac is via a launchd script, and [Lingon](https://www.peterborgapps.com/lingon/) provides a sweet interface for controlling launchd jobs. I added a job there pointing to the script, and rebooted to confirm it was happy:
 
-{{< gist akerl d8191676a25bf16dd5ab >}}
+```sh
+❯ df -h
+Filesystem       Size   Used  Avail Capacity  iused    ifree %iused  Mounted on
+/dev/disk1      233Gi   60Gi  173Gi    26% 15662492 45325027   26%   /
+devfs           199Ki  199Ki    0Bi   100%      688        0  100%   /dev
+map -hosts        0Bi    0Bi    0Bi   100%        0        0  100%   /net
+map auto_home     0Bi    0Bi    0Bi   100%        0        0  100%   /home
+encfs@osxfuse0  233Gi   60Gi  173Gi    26% 15662492 45325027   26%   /Users/akerl/vault
+encfs@osxfuse1  233Gi   60Gi  173Gi    26% 15662492 45325027   26%   /Users/akerl/tmp
+encfs@osxfuse2  233Gi   60Gi  173Gi    26% 15662492 45325027   26%   /Users/akerl/scratch
+```
 
 Success!
 

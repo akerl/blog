@@ -27,22 +27,97 @@ I looked into ways to get around this for my use case. One thing I wanted to avo
 
 After reading Terraform's official provider docs, and skimming the terraform-provider-aws code, this turns out to be pretty easy. Making a provider takes some initial boilerplate:
 
-{{< gist akerl eb0cc7ee46a2007550fa73d1e1c9384c >}}
+```go
+func Serve() {
+    plugin.Serve(&plugin.ServeOpts{
+        ProviderFunc: provider,
+    })
+}
+
+func provider() terraform.ResourceProvider {
+    return &schema.Provider{
+        Schema: awsProvider().Schema,
+        ResourcesMap: map[string]*schema.Resource{
+            "awscreds_iam_access_key": resourceIamAccessKey(),
+        },
+        ConfigureFunc: configure,
+    }
+}
+
+func configure(d *schema.ResourceData) (interface{}, error) {
+    var w wrapper
+    if err := w.init(awsProvider(), d); err != nil {
+        return nil, err
+    }
+    return w, nil
+}
+```
 
 I'm only defining the one resource, but I'm copying the schema of the upstream AWS provider, and I've written up some wrapper code to instantiate a copy of that provider so I can use its `ConfigureFunc`:
 
-{{< gist akerl 11f1d50ab00c919c15b0ee224991b7c1 >}}
+```go
+type wrapper struct {
+    provider *schema.Provider
+    config   interface{}
+}
+
+func (w *wrapper) init(p *schema.Provider, d *schema.ResourceData) error {
+    w.provider = p
+    config, err := p.ConfigureFunc(d)
+    if err != nil {
+        return err
+    }
+    w.config = config
+    return nil
+}
+
+func (w wrapper) resource(name string) *schema.Resource {
+    return w.provider.ResourcesMap[name]
+}
+
+func resolveProvider(provider terraform.ResourceProvider) *schema.Provider {
+    return provider.(*schema.Provider)
+}
+```
 
 So that gets me a working provider that can call the actual AWS provider. For most of the methods on my new resource, I just pass through directly to the real resource. I'm only concerned with the "Create" method, which I want to wrap so that it writes the access key to a local file and then deletes it from the resource so that it doesn't end up in the statefile:
 
-{{< gist akerl c6fab286cd3d5ef9ae6b62549690d929 >}}
+```go
+func createIamAccessKey(d *schema.ResourceData, m interface{}) error {
+    if err := realResource(m).Create(d, realConfig(m)); err != nil {
+        return err
+    }
+
+    access := d.Id()
+    secret := d.Get("secret").(string)
+
+    for _, key := range keysToSuppress {
+        if err := d.Set(key, ""); err != nil {
+            return err
+        }
+    }
+
+    contents := access + "\n" + secret + "\n"
+    file := d.Get("file").(string)
+    return ioutil.WriteFile(file, []byte(contents), 0600)
+}
+```
 
 Using my new provider
 =======
 
 Now that I've got my provider, using it in Terraform is straightforward:
 
-{{< gist akerl 197f0f85d6bbfa329c64490b89dcb4d1 >}}
+```hcl
+provider "awscreds" {
+  region = "us-east-1"
+}
+
+resource "awscreds_iam_access_key" "admin" {
+  user       = "admin_user"
+  file       = "creds/admin_user"
+}
+```
 
 This drops my new secret key into the `creds/admin_user` file. Success!
 

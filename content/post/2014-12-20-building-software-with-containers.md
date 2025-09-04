@@ -27,11 +27,55 @@ While I was brainstorming, [Jon Chen](https://github.com/fly) suggested that I u
 
 The build process is kicked off via a Makefile:
 
-{{< gist akerl bd5aec507f54044e7c4d >}}
+```makefile
+DIR=$(shell pwd)
+
+.PHONY : default manual container build push version local
+
+default: upstream/Makefile container
+
+upstream/Makefile:
+	git submodule update --init
+
+manual:
+	./meta/launch /bin/bash || true
+
+container:
+	./meta/launch
+
+build:
+	rm -rf build
+	make -C upstream/libpam
+	mkdir -p build/usr/{lib/security,local/bin}
+	cp upstream/libpam/google-authenticator build/usr/local/bin/
+	cp upstream/libpam/pam_google_authenticator.so build/usr/lib/security
+	make -C upstream/libpam clean
+	cd build && tar -czvf ../google-authenticator.tar.gz *
+
+push:
+	@date -u +"%Y%m%d%H%M" > version
+	git commit -am "v$$(cat version)"
+	ssh -oStrictHostKeyChecking=no git@github.com &>/dev/null || true
+	git tag -f "v$$(cat version)"
+	git push --tags origin master
+	targit -a .github -c -f akerl/google-authenticator v$$(cat version) google-authenticator.tar.gz
+
+local: build push
+```
 
 And the actual launch script called by the "container" target sets the container up with access to this repo, my SSH agent socket, and my git config:
 
-{{< gist akerl e5cabf1f759b9f05bee9 >}}
+```bash
+#!/usr/bin/env bash
+
+docker run \
+    --rm -t -i \
+    -v $SSH_AUTH_SOCK:/auth.sock \
+    -e SSH_AUTH_SOCK=/auth.sock \
+    -v $(pwd):/opt/build \
+    -v ~/.gitconfig:/etc/gitconfig \
+    dock0/build $1
+```
 
 The default command for dock0/build is `make local`, so when you run `make`, the following happens:
 
@@ -55,13 +99,40 @@ Versioning
 
 The first few things I used this process with were my own packages, so I got to make up my own version numbers. For those, I could just use some shell math to bump the patch number:
 
-{{< gist akerl def541f4a82712f43a38 >}}
+```makefile
+push:
+	@echo $$(sed -r 's/[0-9]+$$//' version)$$(($$(sed -r 's/.*\.//' version) + 1)) > version
+	git commit -am "$$(cat version)"
+	ssh -oStrictHostKeyChecking=no git@github.com &>/dev/null || true
+	git tag -f "$$(cat version)"
+	git push --tags origin master
+	targit -a .github -c -f dock0/initrd $$(cat version) build/initrd.img
+```
 
 Obviously, for things that already have a version number, this doesn't work as well. I did want to track a patch number so I could tell one build from the next, so I settled on appending my patch number, and split that out into its own target:
 
 ([full Makefile here](https://github.com/amylum/s6/blob/master/Makefile))
 
-{{< gist akerl 0a271bcf160fb218f7d7 >}}
+```makefile
+PACKAGE_VERSION = $$(cat upstream/package/version)
+PATCH_VERSION = $$(cat version)
+VERSION = $(PACKAGE_VERSION)-$(PATCH_VERSION)
+
+...
+
+version:
+	@echo $$(($(PATCH_VERSION) + 1)) > version
+
+push: version
+	git commit -am "$(VERSION)"
+	ssh -oStrictHostKeyChecking=no git@github.com &>/dev/null || true
+	git tag -f "$(VERSION)"
+	git push --tags origin master
+	targit -a .github -c -f akerl/s6 $(VERSION) $(RELEASE_FILE)
+
+...
+
+```
 
 Due to the way "thing = foo" variables are handled in Makefiles (recursively expanded every time they're used), the VERSION variable starts referencing the new value as soon as the ./version file is updated. This produces nice version strings that show both the upstream package's version and my patch number.
 

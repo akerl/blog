@@ -34,11 +34,57 @@ When I placed the order, I had vague thoughts about using the base station's USB
 
 I ordered an [RTL-SDR](https://www.amazon.com/NooElec-NESDR-Smart-Bundle-R820T2-Based/dp/B01GDN1T4S/). I already had a Raspberry Pi, so I dropped a fresh Linux image on it. From there, I did some quick bootstrapping to clean up unnecessary cruft and update the system:
 
-{{< gist akerl 3ae8c0b105bdfadc2c5ef87d81626c7d "bootstrap.sh" >}}
+```sh
+apt update
+apt upgrade
+
+systemctl disable alsa-state
+systemctl stop alsa-state
+systemctl disable avahi-daemon
+systemctl stop avahi-daemon
+systemctl disable triggerhappy
+systemctl stop triggerhappy
+systemctl disable wpa_supplicant
+systemctl stop wpa_supplicant
+```
 
 Then I built the [rtl_433](https://github.com/merbanan/rtl_433) and set up a quick config file to dump WH31E events to a file:
 
-{{< gist akerl 3ae8c0b105bdfadc2c5ef87d81626c7d "rtl_setup.sh" >}}
+```sh
+apt install libtool libusb-1.0-0-dev librtlsdr-dev rtl-sdr build-essential autoconf cmake pkg-config git
+
+git clone https://github.com/merbanan/rtl_433 /opt/rtl_433
+(
+  cd /opt/rtl_433
+  mkdir build
+  cd build
+  cmake ..
+  make
+  make install
+)
+
+cat <<EOF > /usr/local/etc/rtl_433/rtl_433.conf
+frequency 915M
+output json:/opt/data/signal.json
+protocol 113
+report_meta time:utc
+EOF
+
+mkdir /opt/data
+
+cat <<EOF > /etc/systemd/system/sdr.service
+[Unit]
+Description=RTL-SDR collection
+[Service]
+ExecStart=/usr/local/bin/rtl_433
+Restart=always
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl enable sdr
+systemctl start sdr
+```
 
 From there, I could monitor the temperature and humidity readings from anywhere in my house, just by SSHing to the Pi and checking the /opt/data/signal.json log file.
 
@@ -54,7 +100,19 @@ I also really didn't want to have to run my own infrastructure.
 
 I did some quick searching, and also reviewed the supported output formats for rtl_433. Initially, I noticed that InfluxDB was a supported output, and InfluxData offers a free plan for cloud-hosted InfluxDB. I set up rtl_433 to ship data to my free account, and... it didn't ever show up. I did some debugging, and found the issue: rtl_433 only supports HTTP for InfluxDB, and the cloud-hosted InfluxDB only works over HTTPS. As a quick hacky fix, I stood up an Nginx server on the Raspberry Pi that just accepted connections on localhost and proxied them to InfluxDB's cloud instance. That let rtl_433 talk on localhost via HTTP, and Nginx handled adding encryption to the next leg of the connection. Here's the nginx config I used:
 
-{{< gist akerl 08d1756544386bd6a798be91bd1192db "nginx.conf" >}}
+```nginx
+server {
+    listen 127.0.0.1:80;
+
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+
+    location / {
+        proxy_pass https://us-west-2-1.aws.cloud2.influxdata.com;
+        proxy_set_header Authorization "Token <REDACTED>";
+    }
+}
+```
 
 And it worked! I got cute charts in InfluxDB.
 
@@ -67,7 +125,43 @@ I wanted a simple interface between rtl_433 and my service, so I decided to use 
 
 Setting up the service and config on the Pi was pretty straightforward:
 
-{{< gist akerl 3ae8c0b105bdfadc2c5ef87d81626c7d "wh31e_metrics.sh" >}}
+```sh
+curl -sLo /usr/local/bin/wh31e_metrics 'https://github.com/akerl/wh31e_metrics/releases/download/v0.0.3/wh31e_metrics_linux_arm'
+chmod a+x /usr/local/bin/wh31e_metrics
+
+cat <<EOF > /usr/local/etc/wh31e_metrics.conf
+influx_url: https://us-west-2-1.aws.cloud2.influxdata.com
+influx_token: TOKEN
+influx_org: ORG_ID
+influx_bucket: BUCKET_NAME 
+syslog_host: 127.0.0.1
+syslog_port: 1514
+sensor_names:
+  SENSOR_ID: HUMAN_NAME
+EOF
+
+cat <<EOF > /usr/local/etc/rtl_433/rtl_433.conf
+frequency 915M
+output json:/opt/data/signal.json
+output syslog:127.0.0.1:1514
+protocol 113
+report_meta time:utc
+EOF
+
+cat <<EOF > /etc/systemd/system/wh31e_metrics.service
+[Unit]
+Description=Syslog to InfluxDB forwarder
+[Service]
+ExecStart=/usr/local/bin/wh31e_metrics /usr/local/etc/wh31e_metrics.conf
+Restart=always
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl enable wh31e_metrics
+systemctl start wh31e_metrics
+systemctl restart sdr
+````
 
 Launching that gave me the graphs I was looking for!
 

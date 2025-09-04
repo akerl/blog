@@ -34,7 +34,20 @@ Step 3: Making GitHub release artifacts
 
 As for actually running this file, we're all about automation, so it runs [here, on CircleCI](https://circleci.com/gh/amylum/git). The `circle.yml` file in the repo runs `make` and then `make release`. That has some scaffolding that you can see [here](https://github.com/amylum/pkgforge-helper/blob/master/Makefile), but the gist is this:
 
-{{< gist akerl b98b1a0589bf7242134e279ffb7ddad0 >}}
+```makefile
+DOCKER_CMD = docker run \
+    --rm -t -i \
+    -v $$(pwd):/opt/build \
+    -v /tmp:/tmp \
+    $(DOCKER_FLAGS) \
+    $(CONTAINER_NAME)
+
+default: prereqs
+    $(DOCKER_CMD) pkgforge build $(PKGFORGE_FLAGS)
+
+release: prereqs
+    $(DOCKER_CMD) pkgforge release $(PKGFORGE_FLAGS)
+```
 
 So locally, when a new version of git comes out, I update the git submodule in my repo to point to the new version, commit that change, tag it with the new version number, and push. CircleCI then builds the new version and uploads it as a GitHub release artifact.
 
