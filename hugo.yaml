@@ -37,5 +37,5 @@ params:
   author: Les Aker
   email: me@lesaker.org
   dateFormat: 2006-01-02
-  goatCounter: goat.akerl.app
+  goatCounter: goat.akerl.org
   disableSpecial1stPost: true
